@@ -1,0 +1,399 @@
+import Link from 'next/link'
+import { CTASection } from '@/components/CTASection'
+
+const painPoints = [
+  {
+    icon: '01',
+    title: 'Owner Dependence',
+    description:
+      'Every decision, follow-up, and escalation still runs through you. The business can\'t move without its founder.',
+  },
+  {
+    icon: '02',
+    title: 'Operational Chaos',
+    description:
+      'Work lives in people\'s heads. Processes are inconsistent. Nothing is documented. New hires take months to ramp up.',
+  },
+  {
+    icon: '03',
+    title: 'Poor Visibility',
+    description:
+      'You can\'t see what\'s happening across the business. Reporting is manual, unreliable, or nonexistent.',
+  },
+  {
+    icon: '04',
+    title: 'Dropped Balls',
+    description:
+      'Follow-ups fall through the cracks. Handoffs between departments are messy. Clients notice before leadership does.',
+  },
+  {
+    icon: '05',
+    title: 'Manual Overload',
+    description:
+      'Your team spends hours on tasks that should be automated. Admin work eats into revenue-producing time.',
+  },
+  {
+    icon: '06',
+    title: 'Growth Bottlenecks',
+    description:
+      'Revenue is growing but the operation can\'t keep up. Hiring more people doesn\'t fix the real problem.',
+  },
+]
+
+const stackedSteps = [
+  {
+    letter: 'S',
+    name: 'Structure',
+    description: 'Define how the business actually operates. Clarify pipelines, roles, and workflows.',
+    outcome: 'Work stops living in people\'s heads.',
+  },
+  {
+    letter: 'T',
+    name: 'Tracking',
+    description: 'Create visibility into reality. Dashboards, KPIs, and reporting leadership can trust.',
+    outcome: 'Decisions based on data, not assumptions.',
+  },
+  {
+    letter: 'A',
+    name: 'Automation',
+    description: 'Eliminate manual execution where systems should act. Follow-ups, integrations, triggers.',
+    outcome: 'Consistency without micromanagement.',
+  },
+  {
+    letter: 'C',
+    name: 'Communication',
+    description: 'Improve internal clarity and handoffs. Clear ownership, fewer dropped balls.',
+    outcome: 'Smoother execution across the company.',
+  },
+  {
+    letter: 'K',
+    name: 'Knowledge',
+    description: 'Document and operationalize how the business runs. SOPs, onboarding, institutional memory.',
+    outcome: 'The business becomes trainable and scalable.',
+  },
+  {
+    letter: 'E',
+    name: 'Execution',
+    description: 'Turn strategy into operational follow-through. Accountability, visibility, and measured improvement.',
+    outcome: 'Better execution at every layer.',
+  },
+  {
+    letter: 'D',
+    name: 'Delegation',
+    description: 'Build a business that hands off responsibility without losing control. Owner offloading and manager enablement.',
+    outcome: 'Growth without everything routing through the owner.',
+  },
+]
+
+const trustSignals = [
+  { metric: '7', label: 'Operational Layers', sublabel: 'Covered by the STACKED framework' },
+  { metric: '100%', label: 'Systems-First', sublabel: 'Every engagement is implementation-driven' },
+  { metric: '0', label: 'Fluff', sublabel: 'No theory decks. We build and install.' },
+]
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-50 via-white to-brand-50/30" />
+        <div className="relative container-wide section-padding">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
+              Business Operating Systems for Service Companies
+            </p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-dark-950 text-balance">
+              Stop running your business{' '}
+              <span className="gradient-text">on people.</span>
+              <br />
+              Start running it on{' '}
+              <span className="gradient-text">systems.</span>
+            </h1>
+            <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
+              STACKED OS installs the operational infrastructure growing service
+              businesses need to scale — structure, tracking, automation,
+              communication, knowledge, execution, and delegation.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Link href="/book-a-call" className="btn-primary text-lg !py-5 !px-10">
+                Book a Strategy Call
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+              <Link href="/method" className="btn-secondary text-lg !py-5 !px-10">
+                See the Method
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Bar */}
+      <section className="bg-dark-950 py-16">
+        <div className="container-wide section-padding">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {trustSignals.map((signal) => (
+              <div key={signal.label} className="text-center">
+                <p className="text-4xl md:text-5xl font-bold text-white">
+                  {signal.metric}
+                </p>
+                <p className="mt-2 text-sm font-semibold text-dark-300 uppercase tracking-wider">
+                  {signal.label}
+                </p>
+                <p className="mt-1 text-sm text-dark-500">{signal.sublabel}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pain Points Section */}
+      <section className="py-24 md:py-32">
+        <div className="container-wide section-padding">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
+              The Problem
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-dark-950 text-balance">
+              Growing service businesses hit the same operational walls.
+            </h2>
+            <p className="mt-6 text-lg text-dark-500 max-w-2xl">
+              You have revenue. You have a team. You have demand. But the
+              business is still too dependent on tribal knowledge, manual
+              processes, and individual effort.
+            </p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {painPoints.map((point) => (
+              <div key={point.title} className="card group">
+                <span className="text-xs font-bold text-brand-600 tracking-widest">
+                  {point.icon}
+                </span>
+                <h3 className="mt-4 text-xl font-bold text-dark-900">
+                  {point.title}
+                </h3>
+                <p className="mt-3 text-dark-500 leading-relaxed">
+                  {point.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STACKED Method Preview */}
+      <section className="py-24 md:py-32 bg-dark-50">
+        <div className="container-wide section-padding">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
+              The STACKED Framework
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-dark-950 text-balance">
+              Seven layers. One operating system.
+            </h2>
+            <p className="mt-6 text-lg text-dark-500">
+              Every engagement follows the STACKED framework — a structured
+              approach to building operational infrastructure that scales.
+            </p>
+          </div>
+
+          <div className="mt-16 space-y-4">
+            {stackedSteps.map((step, index) => (
+              <div
+                key={step.letter}
+                className="card !p-6 md:!p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+              >
+                <div className="flex items-center gap-4 md:min-w-[200px]">
+                  <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-700 text-white font-bold text-lg shrink-0">
+                    {step.letter}
+                  </span>
+                  <h3 className="text-xl font-bold text-dark-900">
+                    {step.name}
+                  </h3>
+                </div>
+                <p className="text-dark-500 md:flex-1">{step.description}</p>
+                <p className="text-sm font-semibold text-brand-700 md:min-w-[280px] md:text-right">
+                  {step.outcome}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/method" className="btn-dark">
+              Explore the Full Method
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Who It's For */}
+      <section className="py-24 md:py-32">
+        <div className="container-wide section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
+                Who This Is For
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950 text-balance">
+                Built for service businesses that have outgrown their
+                operations.
+              </h2>
+              <p className="mt-6 text-lg text-dark-500 leading-relaxed">
+                STACKED OS works with companies that already have revenue, a
+                team, and market demand — but their operations haven&apos;t kept
+                up with their growth. If your business is successful but
+                operationally messy, we can help.
+              </p>
+              <Link href="/book-a-call" className="btn-primary mt-8">
+                See If STACKED OS Fits
+              </Link>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                'You have revenue but your operations feel reactive, not proactive.',
+                'Your team is growing but accountability and handoffs are breaking down.',
+                'You\'re the bottleneck — the business can\'t move without you.',
+                'Reporting is unreliable. You don\'t trust your own data.',
+                'New hires take too long to onboard because nothing is documented.',
+                'You\'ve tried tools before but nothing stuck because there was no system behind them.',
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-dark-50"
+                >
+                  <svg
+                    className="w-6 h-6 text-brand-700 shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p className="text-dark-700">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Preview */}
+      <section className="py-24 md:py-32 bg-dark-950 text-white">
+        <div className="container-wide section-padding">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-brand-400 uppercase tracking-widest mb-4">
+              How It Works
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-balance">
+              From operational chaos to a system that scales.
+            </h2>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Diagnose',
+                description:
+                  'We audit your current operations — workflows, tools, bottlenecks, handoffs, and gaps. No assumptions. Just reality.',
+              },
+              {
+                step: '02',
+                title: 'Design',
+                description:
+                  'We map the operational infrastructure your business needs across all seven STACKED layers — tailored to your model.',
+              },
+              {
+                step: '03',
+                title: 'Deploy',
+                description:
+                  'We build and install the systems, automations, dashboards, SOPs, and accountability frameworks your business needs to scale.',
+              },
+            ].map((item) => (
+              <div key={item.step} className="card-dark">
+                <span className="text-sm font-bold text-brand-400 tracking-widest">
+                  Step {item.step}
+                </span>
+                <h3 className="mt-4 text-2xl font-bold">{item.title}</h3>
+                <p className="mt-4 text-dark-300 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/how-it-works" className="btn-primary">
+              See the Full Process
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Placeholder */}
+      <section className="py-24 md:py-32">
+        <div className="container-wide section-padding">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="card !p-12 md:!p-16 bg-dark-50 !border-0">
+              <svg
+                className="w-12 h-12 text-brand-300 mx-auto mb-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <blockquote className="text-xl md:text-2xl font-medium text-dark-800 leading-relaxed text-balance">
+                &ldquo;We had the revenue and the team, but our operations
+                were held together with duct tape. STACKED OS gave us the
+                infrastructure we should have built from day one.&rdquo;
+              </blockquote>
+              <div className="mt-8">
+                <p className="font-semibold text-dark-900">
+                  Service Business Owner
+                </p>
+                <p className="text-sm text-dark-500">
+                  Client Testimonial Placeholder
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <CTASection />
+    </>
+  )
+}

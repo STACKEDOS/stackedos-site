@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-dark-900;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 md:px-8 lg:px-12;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-brand-800;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand-700 rounded-lg
+    hover:bg-brand-800 transition-all duration-200 shadow-lg shadow-brand-700/25 hover:shadow-xl hover:shadow-brand-700/30
+    hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-dark-900 bg-white border-2 border-dark-200 rounded-lg
+    hover:border-dark-400 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-dark-900 rounded-lg
+    hover:bg-dark-800 transition-all duration-200 shadow-lg shadow-dark-900/25 hover:shadow-xl hover:shadow-dark-900/30
+    hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-dark-100 p-8 transition-all duration-300
+    hover:shadow-lg hover:shadow-dark-900/5 hover:border-dark-200;
+  }
+
+  .card-dark {
+    @apply bg-dark-900 rounded-2xl border border-dark-700 p-8 text-white transition-all duration-300
+    hover:border-dark-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
