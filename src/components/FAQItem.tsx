@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 export function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   return (
     <div className="border-b border-dark-100">

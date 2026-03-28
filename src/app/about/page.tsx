@@ -149,6 +149,57 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Founder */}
+      <section className="py-24 md:py-32">
+        <div className="container-wide section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
+                The Founder
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950">
+                Brandon Bowers
+              </h2>
+              <div className="mt-8 space-y-6 text-lg text-dark-600 leading-relaxed">
+                <p>
+                  Brandon built STACKED OS after spending years inside
+                  service businesses watching the same pattern repeat:
+                  companies with strong revenue and great teams hitting a
+                  ceiling because their operations couldn&apos;t keep up with
+                  their growth.
+                </p>
+                <p>
+                  The problem was never the people — it was the
+                  infrastructure. These businesses were running on tribal
+                  knowledge, manual processes, and founder dependency instead
+                  of real operational systems. They didn&apos;t need more
+                  consultants handing them slide decks. They needed someone
+                  to build and install the actual systems.
+                </p>
+                <p>
+                  That&apos;s what STACKED OS does. Brandon and the team
+                  work directly inside service businesses to diagnose
+                  operational gaps, design the infrastructure, and deploy the
+                  systems that let companies scale without chaos — and
+                  without everything routing through the owner.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-dark-50 rounded-2xl p-10 md:p-12 flex items-center justify-center min-h-[400px]">
+              <div className="text-center">
+                <div className="w-32 h-32 rounded-full bg-dark-200 mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-dark-400">BB</span>
+                </div>
+                <p className="text-dark-900 font-bold text-xl">Brandon Bowers</p>
+                <p className="text-dark-500 mt-1">Founder, STACKED OS</p>
+                <p className="text-dark-400 text-sm mt-1">Bowers Group Inc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why STACKED */}
       <section className="py-24 md:py-32">
         <div className="container-wide section-padding">

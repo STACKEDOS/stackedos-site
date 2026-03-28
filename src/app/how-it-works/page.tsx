@@ -23,7 +23,7 @@ const phases = [
     deliverables: [
       'Operational audit across all departments',
       'Workflow and pipeline mapping',
-      'Tool and system inventory',
+      'Operational tool assessment',
       'Bottleneck and gap identification',
       'Stakeholder interviews and process documentation',
     ],
@@ -58,7 +58,7 @@ const phases = [
       'Dashboard and reporting setup',
       'SOP documentation and knowledge base',
       'Team training and adoption support',
-      'Integration between tools and departments',
+      'Cross-department operational connectivity',
     ],
     outcome:
       'A fully operational system running inside your business — not a slide deck.',

@@ -129,13 +129,13 @@ export default function SolutionsPage() {
               Solutions
             </p>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-dark-950 text-balance">
-              Operational systems built for service businesses that are ready to
-              scale.
+              One operating system. Six integrated capabilities.
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
-              Every solution is designed around the STACKED framework — giving
-              your business the structure, visibility, automation, and
-              accountability it needs to grow without chaos.
+              Every engagement addresses these six operational domains as part
+              of one integrated installation — giving your business the
+              structure, visibility, automation, and accountability it needs to
+              grow without chaos.
             </p>
           </div>
         </div>
