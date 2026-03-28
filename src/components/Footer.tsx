@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const footerLinks = {
   Company: [
@@ -22,9 +23,12 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold tracking-tight text-white">
-                STACKED<span className="text-brand-400"> OS</span>
-              </span>
+              <Image
+                src="/logo-white.svg"
+                alt="STACKED OS"
+                width={180}
+                height={43}
+              />
             </Link>
             <p className="mt-4 text-dark-400 max-w-md leading-relaxed">
               We install operating systems for growing service businesses.

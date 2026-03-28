@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 const navigation = [
@@ -19,9 +20,13 @@ export function Header() {
       <div className="container-wide section-padding">
         <nav className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tight text-dark-900">
-              STACKED<span className="text-brand-700"> OS</span>
-            </span>
+            <Image
+              src="/logo-black.svg"
+              alt="STACKED OS"
+              width={180}
+              height={43}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

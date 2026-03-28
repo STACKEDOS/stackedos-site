@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     'revenue operations',
   ],
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
       'We install operating systems for growing service businesses. Run on systems instead of people.',
     images: [
       {
-        url: '/og-image.svg',
+        url: '/og-logo.png',
         width: 1200,
         height: 630,
         alt: 'STACKED OS — Business Operating Systems for Service Companies',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     title: 'STACKED OS — Business Operating Systems for Service Companies',
     description:
       'We install operating systems for growing service businesses. Run on systems instead of people.',
-    images: ['/og-image.svg'],
+    images: ['/og-logo.png'],
   },
   robots: {
     index: true,
