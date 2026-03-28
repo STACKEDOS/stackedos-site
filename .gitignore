@@ -1,1 +1,10 @@
 node_modules
+.next
+out
+src
+package*.json
+tsconfig.json
+tailwind.config.ts
+postcss.config.js
+next.config.js
+.github
