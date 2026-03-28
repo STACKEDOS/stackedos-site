@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/stackedos-site',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
