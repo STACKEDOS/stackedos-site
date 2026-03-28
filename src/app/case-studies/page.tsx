@@ -26,7 +26,7 @@ const caseStudies = [
       'Automated follow-ups reduced dropped balls by 90%',
       'Full SOP library for core operations',
     ],
-    layers: ['Structure', 'Track', 'Automate', 'Durability'],
+    layers: ['Structure', 'Tracking', 'Automation', 'Durability'],
   },
   {
     industry: 'Home Services',
@@ -40,7 +40,7 @@ const caseStudies = [
       'Knowledge base eliminated tribal knowledge dependency',
       'Manager enablement reduced escalations by 70%',
     ],
-    layers: ['Structure', 'Automate', 'Knowledge', 'Execution'],
+    layers: ['Structure', 'Automation', 'Knowledge', 'Execution'],
   },
   {
     industry: 'Marketing Agency',
@@ -54,7 +54,7 @@ const caseStudies = [
       'Onboarding time cut by 60% with documented SOPs',
       'Clear accountability by role across all departments',
     ],
-    layers: ['Structure', 'Clarity', 'Track', 'Knowledge'],
+    layers: ['Structure', 'Clarity', 'Tracking', 'Knowledge'],
   },
 ]
 

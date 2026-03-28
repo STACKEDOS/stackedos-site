@@ -50,13 +50,13 @@ const stackedSteps = [
   },
   {
     letter: 'T',
-    name: 'Track',
+    name: 'Tracking',
     description: 'Create visibility into reality. Dashboards, KPIs, and reporting leadership can trust.',
     outcome: 'Decisions based on data, not assumptions.',
   },
   {
     letter: 'A',
-    name: 'Automate',
+    name: 'Automation',
     description: 'Eliminate manual execution where systems should act. Automated follow-ups, integrations, and triggers.',
     outcome: 'Consistency without micromanagement.',
   },

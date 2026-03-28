@@ -5,7 +5,7 @@ import { CTASection } from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'The STACKED Method — A 7-Layer Business Operating System Framework',
   description:
-    'Structure, Track, Automate, Clarity, Knowledge, Execution, and Durability. The STACKED method covers every operational layer a service business needs to scale.',
+    'Structure, Tracking, Automation, Clarity, Knowledge, Execution, and Durability. The STACKED method covers every operational layer a service business needs to scale.',
   openGraph: {
     title: 'The STACKED Method — 7-Layer Operating System Framework',
     description:
@@ -32,7 +32,7 @@ const layers = [
   },
   {
     letter: 'T',
-    name: 'Track',
+    name: 'Tracking',
     tagline: 'Create visibility into reality.',
     description:
       'You can\'t manage what you can\'t see. Tracking gives leadership accurate, real-time visibility into pipeline health, revenue, team performance, and operational KPIs — replacing gut feelings with data.',
@@ -48,7 +48,7 @@ const layers = [
   },
   {
     letter: 'A',
-    name: 'Automate',
+    name: 'Automation',
     tagline: 'Eliminate manual execution where systems should act.',
     description:
       'Automation isn\'t about replacing people — it\'s about removing the manual tasks that slow your team down and create inconsistency. We automate follow-ups, integrations, triggers, and workflow enforcement so your operation runs reliably.',
