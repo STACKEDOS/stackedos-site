@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'What does "installing an operating system" actually mean?',
     answer:
-      'It means we build and deploy the actual operational infrastructure your business needs — CRM and pipeline optimization, workflow automations, dashboards and reporting, SOPs, accountability systems, and integrations between your tools. We don\'t hand you a strategy deck. We build real systems inside your business.',
+      'It means we build and deploy the actual operational infrastructure your business needs — pipeline architecture, workflow automations, dashboards and reporting, SOPs, accountability systems, and integrations between your tools. We don\'t hand you a strategy deck. We build real systems inside your business.',
   },
   {
     question: 'How is this different from hiring a consultant?',
@@ -38,10 +38,10 @@ const faqs = [
   {
     question: 'What tools do you work with?',
     answer:
-      'We\'re tool-agnostic. We work with whatever CRM, project management, invoicing, and communication tools make sense for your business. Common platforms we deploy on include HubSpot, Salesforce, Monday.com, Asana, ClickUp, Make, Zapier, and many others. If you don\'t have the right tools yet, we\'ll recommend them.',
+      'We\'re platform-agnostic. We work with whatever pipeline, project management, invoicing, and communication tools make sense for your business. We don\'t lead with any single platform — we lead with operational design and deploy on the tools that fit your business model, team, and growth stage. If you don\'t have the right tools yet, we\'ll recommend them.',
   },
   {
-    question: 'Do we need to change our CRM or tools?',
+    question: 'Do we need to change our tools or platforms?',
     answer:
       'Not necessarily. We audit what you have and optimize it first. If your current tools can support what your business needs, we\'ll build on them. If there\'s a clear case for switching, we\'ll explain why and handle the migration.',
   },

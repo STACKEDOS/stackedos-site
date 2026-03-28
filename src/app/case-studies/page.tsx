@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const caseStudies = [
   {
     industry: 'Professional Services',
-    title: 'From founder-dependent to fully operational in 10 weeks',
+    title: 'Owner reclaimed 20+ hours/week after full operational buildout',
     challenge:
       'A growing professional services firm with 15 employees was bottlenecked by the founder. Every escalation, follow-up, and client decision routed through one person. Reporting was manual, onboarding took weeks, and the team lacked clear accountability.',
     results: [
@@ -26,11 +26,11 @@ const caseStudies = [
       'Automated follow-ups reduced dropped balls by 90%',
       'Full SOP library for core operations',
     ],
-    layers: ['Structure', 'Tracking', 'Automation', 'Durability'],
+    layers: ['Structure', 'Track', 'Automate', 'Durability'],
   },
   {
     industry: 'Home Services',
-    title: 'Scaling from $2M to $5M without adding operational headcount',
+    title: '2.5x revenue growth without adding operational headcount',
     challenge:
       'A home services company was growing fast but their operations were held together by a few key employees. When anyone was out, things fell apart. No SOPs, unreliable reporting, and manual scheduling created constant friction.',
     results: [
@@ -40,11 +40,11 @@ const caseStudies = [
       'Knowledge base eliminated tribal knowledge dependency',
       'Manager enablement reduced escalations by 70%',
     ],
-    layers: ['Structure', 'Automation', 'Knowledge', 'Execution'],
+    layers: ['Structure', 'Automate', 'Knowledge', 'Execution'],
   },
   {
     industry: 'Marketing Agency',
-    title: 'Rebuilding operations to support a 40-person team',
+    title: 'Operational rebuild reduced client churn and cut onboarding time by 60%',
     challenge:
       'A digital marketing agency had grown to 40 people but was still running on the same ad-hoc processes from when they were 10. Project handoffs were messy, reporting was inconsistent, and client retention was suffering due to operational gaps.',
     results: [
@@ -54,7 +54,7 @@ const caseStudies = [
       'Onboarding time cut by 60% with documented SOPs',
       'Clear accountability by role across all departments',
     ],
-    layers: ['Structure', 'Clarity', 'Tracking', 'Knowledge'],
+    layers: ['Structure', 'Clarity', 'Track', 'Knowledge'],
   },
 ]
 
@@ -157,7 +157,7 @@ export default function CaseStudiesPage() {
             ))}
           </div>
           <p className="mt-12 text-xs text-dark-400 italic text-center">
-            Case studies are representative examples based on common client engagements. Specific details have been generalized for confidentiality.
+            Results are representative of typical STACKED OS engagements. Details generalized for confidentiality.
           </p>
         </div>
       </section>

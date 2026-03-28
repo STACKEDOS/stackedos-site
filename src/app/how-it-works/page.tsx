@@ -48,12 +48,12 @@ const phases = [
   },
   {
     phase: 'Phase 3',
-    title: 'System Deployment',
+    title: 'Build & Deploy',
     duration: 'Week 4–12',
     description:
       'We build and install. This isn\'t a handoff of recommendations — we do the implementation. Systems, automations, dashboards, SOPs, integrations, and accountability structures are deployed into your business.',
     deliverables: [
-      'CRM and pipeline buildout or optimization',
+      'Pipeline and workflow infrastructure deployment',
       'Automation deployment across workflows',
       'Dashboard and reporting setup',
       'SOP documentation and knowledge base',

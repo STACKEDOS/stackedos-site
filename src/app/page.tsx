@@ -57,7 +57,7 @@ const stackedSteps = [
   {
     letter: 'A',
     name: 'Automate',
-    description: 'Eliminate manual execution where systems should act. AI-powered follow-ups, integrations, and triggers.',
+    description: 'Eliminate manual execution where systems should act. Automated follow-ups, integrations, and triggers.',
     outcome: 'Consistency without micromanagement.',
   },
   {
@@ -89,7 +89,7 @@ const stackedSteps = [
 const trustSignals = [
   { metric: '7', label: 'Operational Layers', sublabel: 'Covered by the STACKED framework' },
   { metric: '100%', label: 'Systems-First', sublabel: 'Every engagement is implementation-driven' },
-  { metric: '50+', label: 'Automations Deployed', sublabel: 'AI-driven workflows installed per engagement' },
+  { metric: '50+', label: 'Automations Deployed', sublabel: 'Workflows installed per engagement' },
 ]
 
 export default function HomePage() {
@@ -114,9 +114,9 @@ export default function HomePage() {
               <span className="gradient-text">systems.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
-              STACKED OS installs AI-powered operational infrastructure for growing
-              service businesses — structure, tracking, automation, clarity,
-              knowledge, execution, and durability. Smart systems that scale with you.
+              STACKED OS installs the operational infrastructure growing service
+              businesses need to scale — structure, tracking, automation, clarity,
+              knowledge, execution, and durability. Built to run without you.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/book-a-call" className="btn-primary text-lg !py-5 !px-10">
@@ -170,7 +170,7 @@ export default function HomePage() {
               The Problem
             </p>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-dark-950 text-balance">
-              Growing service businesses hit the same operational walls.
+              Your business is growing. Your operations aren&apos;t.
             </h2>
             <p className="mt-6 text-lg text-dark-500 max-w-2xl">
               You have revenue. You have a team. You have demand. But the
@@ -343,7 +343,7 @@ export default function HomePage() {
                 step: '03',
                 title: 'Deploy',
                 description:
-                  'We build and install AI-powered systems, automations, dashboards, SOPs, and accountability frameworks your business needs to scale.',
+                  'We build and install the systems, automations, dashboards, SOPs, and accountability frameworks your business needs to scale.',
               },
             ].map((item) => (
               <div key={item.step} className="card-dark">

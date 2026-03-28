@@ -5,19 +5,19 @@ import { CTASection } from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'Solutions — Operational Systems for Growing Service Businesses',
   description:
-    'From CRM and pipeline optimization to workflow automation, SOPs, dashboards, and team accountability — STACKED OS builds the operational infrastructure service businesses need to scale.',
+    'From pipeline architecture to workflow automation, SOPs, dashboards, and team accountability — STACKED OS builds the operational infrastructure service businesses need to scale.',
   openGraph: {
     title: 'Solutions — STACKED OS',
     description:
-      'Operational systems for growing service businesses. CRM optimization, automation, SOPs, dashboards, and more.',
+      'Operational systems for growing service businesses. Pipeline architecture, automation, SOPs, dashboards, and more.',
   },
 }
 
 const solutions = [
   {
-    title: 'CRM & Pipeline Optimization',
+    title: 'Pipeline & Revenue Operations Architecture',
     description:
-      'Your CRM should be the operational backbone of your business — not a glorified address book. We build and optimize your pipeline to track every lead, deal, and client from first touch to payment.',
+      'Your pipeline should be the operational backbone of your business — not a glorified address book. We architect and optimize your revenue operations to track every lead, deal, and client from first touch to payment.',
     capabilities: [
       'Pipeline architecture and stage design',
       'Lead tracking and source attribution',
@@ -37,7 +37,7 @@ const solutions = [
       'We eliminate the manual work that slows your team down and creates inconsistency. Automated follow-ups, cross-tool integrations, conditional triggers, and process enforcement — built around your actual workflows.',
     capabilities: [
       'Follow-up and sequence automation',
-      'Cross-system integrations (CRM, project management, invoicing, etc.)',
+      'Cross-system integrations (pipeline, project management, invoicing, etc.)',
       'Conditional workflow logic and routing',
       'Notification and escalation triggers',
       'Process enforcement through automation',

@@ -47,7 +47,7 @@ export default function AboutPage() {
               About STACKED OS
             </p>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-dark-950 text-balance">
-              We install operating systems for service companies.
+              We build the infrastructure service businesses run on.
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
               STACKED OS exists because too many growing service businesses are
