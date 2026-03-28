@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://stackedos.com'),
   title: {
-    default: 'STACKED OS — Business Operating Systems for Service Companies',
+    default: 'STACKED OS — Business Operating Systems for Growing Companies',
     template: '%s | STACKED OS',
   },
   description:
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://stackedos.com',
     siteName: 'STACKED OS',
-    title: 'STACKED OS — Business Operating Systems for Service Companies',
+    title: 'STACKED OS — Business Operating Systems for Growing Companies',
     description:
       'We install operating systems for growing businesses. Run on systems instead of people.',
     images: [
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
         url: '/stackedos-site/og-logo.png',
         width: 1200,
         height: 630,
-        alt: 'STACKED OS — Business Operating Systems for Service Companies',
+        alt: 'STACKED OS — Business Operating Systems for Growing Companies',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'STACKED OS — Business Operating Systems for Service Companies',
+    title: 'STACKED OS — Business Operating Systems for Growing Companies',
     description:
       'We install operating systems for growing businesses. Run on systems instead of people.',
     images: ['/stackedos-site/og-logo.png'],
