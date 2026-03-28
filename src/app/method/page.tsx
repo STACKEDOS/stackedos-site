@@ -5,11 +5,11 @@ import { CTASection } from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'The STACKED Method — A 7-Layer Business Operating System Framework',
   description:
-    'Structure, Tracking, Automation, Clarity, Knowledge, Execution, and Durability. The STACKED method covers every operational layer a service business needs to scale.',
+    'Structure, Tracking, Automation, Clarity, Knowledge, Execution, and Durability. The STACKED method covers every operational layer a growing business needs to scale.',
   openGraph: {
     title: 'The STACKED Method — 7-Layer Operating System Framework',
     description:
-      'The complete operational framework for service businesses. Seven layers that cover everything from structure to durability.',
+      'The complete operational framework for growing businesses. Seven layers that cover everything from structure to durability.',
   },
 }
 
@@ -19,7 +19,7 @@ const layers = [
     name: 'Structure',
     tagline: 'Define how the business actually operates.',
     description:
-      'Most service businesses grow without ever formalizing how work actually moves through the company. Structure is the foundation — clarifying pipelines, workflows, roles, and stages so the operation has a backbone.',
+      'Most businesses grow without ever formalizing how work actually moves through the company. Structure is the foundation — clarifying pipelines, workflows, roles, and stages so the operation has a backbone.',
     details: [
       'Clarify pipelines and workflows from lead to fulfillment to payment',
       'Define roles and responsibilities across departments',
@@ -145,7 +145,7 @@ export default function MethodPage() {
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
               The STACKED framework is how we diagnose, design, and deploy
-              operational infrastructure for growing service businesses. Each
+              operational infrastructure for businesses that have outgrown their informal management. Each
               layer addresses a critical part of how your business runs.
             </p>
           </div>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Book a Strategy Call — See If STACKED OS Fits Your Business',
   description:
-    'Schedule a strategy call with STACKED OS. We\'ll diagnose your operational bottlenecks and determine if our systems-first approach is the right fit for your service business.',
+    'Schedule a strategy call with STACKED OS. We\'ll diagnose your operational bottlenecks and determine if our systems-first approach is the right fit for your business.',
   openGraph: {
     title: 'Book a Strategy Call — STACKED OS',
     description:
@@ -85,7 +85,7 @@ export default function BookACallPage() {
                   Best fit for this call:
                 </p>
                 <ul className="space-y-2 text-sm text-dark-600">
-                  <li>• Service-based businesses with existing revenue and a team</li>
+                  <li>• Businesses with existing revenue, a team, and operations that can't keep up</li>
                   <li>• Companies experiencing operational growing pains</li>
                   <li>• Owners/operators who want systems, not more people</li>
                   <li>• Businesses ready to invest in operational infrastructure</li>

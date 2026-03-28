@@ -31,7 +31,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-dark-400 max-w-md leading-relaxed">
-              We install operating systems for growing service businesses.
+              We install operating systems for growing businesses.
               Structure, tracking, automation, clarity, knowledge,
               execution, and durability — built to scale.
             </p>

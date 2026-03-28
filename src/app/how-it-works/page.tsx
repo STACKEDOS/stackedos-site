@@ -5,11 +5,11 @@ import { CTASection } from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'How It Works — Our Process for Installing Business Operating Systems',
   description:
-    'Learn how STACKED OS diagnoses operational bottlenecks, designs custom systems, and deploys the infrastructure growing service businesses need to scale.',
+    'Learn how STACKED OS diagnoses operational bottlenecks, designs custom systems, and deploys the infrastructure growing businesses need to scale.',
   openGraph: {
     title: 'How It Works — STACKED OS Process',
     description:
-      'From operational audit to full system deployment. See how we install operating systems for service businesses.',
+      'From operational audit to full system deployment. See how we install operating systems for growing businesses.',
   },
 }
 

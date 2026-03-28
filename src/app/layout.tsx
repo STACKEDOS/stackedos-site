@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | STACKED OS',
   },
   description:
-    'We install operating systems for growing service businesses. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
+    'We install operating systems for growing businesses drowning in operational chaos. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
   keywords: [
     'business operating system',
     'service business operations',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'STACKED OS',
     title: 'STACKED OS — Business Operating Systems for Service Companies',
     description:
-      'We install operating systems for growing service businesses. Run on systems instead of people.',
+      'We install operating systems for growing businesses. Run on systems instead of people.',
     images: [
       {
         url: '/stackedos-site/og-logo.png',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'STACKED OS — Business Operating Systems for Service Companies',
     description:
-      'We install operating systems for growing service businesses. Run on systems instead of people.',
+      'We install operating systems for growing businesses. Run on systems instead of people.',
     images: ['/stackedos-site/og-logo.png'],
   },
   robots: {
@@ -77,7 +77,7 @@ const jsonLd = {
   name: 'STACKED OS',
   url: 'https://stackedos.com',
   description:
-    'We install operating systems for growing service businesses. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
+    'We install operating systems for growing businesses drowning in operational chaos. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'brandon@bowersgroupinc.com',

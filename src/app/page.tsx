@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="relative container-wide section-padding">
           <div className="max-w-4xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
-              Business Operating Systems for Service Companies
+              Business Operating Systems for Companies That Have Outgrown Informal Management
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-dark-950 text-balance">
               Stop running your business{' '}
@@ -114,7 +114,7 @@ export default function HomePage() {
               <span className="gradient-text">systems.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
-              STACKED OS installs the operational infrastructure growing service
+              STACKED OS installs the operational infrastructure growing
               businesses need to scale — structure, tracking, automation, clarity,
               knowledge, execution, and durability. Built to run without you.
             </p>
@@ -265,12 +265,12 @@ export default function HomePage() {
                 Who This Is For
               </p>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950 text-balance">
-                Built for service businesses that have outgrown their
+                Built for businesses that have outgrown their
                 operations.
               </h2>
               <p className="mt-6 text-lg text-dark-500 leading-relaxed">
                 STACKED OS works with companies that already have revenue, a
-                team, and market demand — but their operations haven&apos;t kept
+                team, and real demand — but their operations haven&apos;t kept
                 up with their growth. If your business is successful but
                 operationally messy, we can help.
               </p>

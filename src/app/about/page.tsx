@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { CTASection } from '@/components/CTASection'
 
 export const metadata: Metadata = {
-  title: 'About STACKED OS — Operational Infrastructure for Service Companies',
+  title: 'About STACKED OS — Operational Infrastructure for Growing Companies',
   description:
-    'STACKED OS helps growing service businesses run on systems instead of people. We install the operational infrastructure companies need to scale with structure, not chaos.',
+    'STACKED OS helps growing businesses run on systems instead of people. We install the operational infrastructure companies need to scale with structure, not chaos.',
   openGraph: {
     title: 'About STACKED OS',
     description:
-      'We install operating systems for growing service businesses. Structure, visibility, automation, and accountability — built to scale.',
+      'We install operating systems for growing businesses. Structure, visibility, automation, and accountability — built to scale.',
   },
 }
 
@@ -47,10 +47,10 @@ export default function AboutPage() {
               About STACKED OS
             </p>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-dark-950 text-balance">
-              We build the infrastructure service businesses run on.
+              We build the operational infrastructure growing businesses run on.
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
-              STACKED OS exists because too many growing service businesses are
+              STACKED OS exists because too many growing businesses are
               held together by heroic individual effort instead of real
               operational infrastructure. We fix that.
             </p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
               </h2>
               <div className="mt-8 space-y-6 text-lg text-dark-600 leading-relaxed">
                 <p>
-                  Most service businesses hit a ceiling. They have revenue,
+                  Most growing businesses hit a ceiling. They have revenue,
                   clients, a team, and demand — but the operation underneath it
                   all is held together with duct tape.
                 </p>
@@ -93,8 +93,7 @@ export default function AboutPage() {
                     What We Do
                   </p>
                   <p className="text-dark-200 text-lg">
-                    We install operational infrastructure for growing service
-                    businesses.
+                    We install operational infrastructure for businesses where growth has outpaced operations.
                   </p>
                 </div>
                 <div>
@@ -102,8 +101,7 @@ export default function AboutPage() {
                     Who It&apos;s For
                   </p>
                   <p className="text-dark-200 text-lg">
-                    Service-based companies with revenue, a team, and demand —
-                    but operations that haven&apos;t scaled with them.
+                    Companies with revenue, a team, and demand — but operations that haven&apos;t scaled with their growth.
                   </p>
                 </div>
                 <div>
@@ -163,8 +161,8 @@ export default function AboutPage() {
               <div className="mt-8 space-y-6 text-lg text-dark-600 leading-relaxed">
                 <p>
                   Brandon built STACKED OS after spending years inside
-                  service businesses watching the same pattern repeat:
-                  companies with strong revenue and great teams hitting a
+                  growing companies watching the same pattern repeat:
+                  strong revenue and great teams hitting a
                   ceiling because their operations couldn&apos;t keep up with
                   their growth.
                 </p>
@@ -178,7 +176,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   That&apos;s what STACKED OS does. Brandon and the team
-                  work directly inside service businesses to diagnose
+                  work directly inside growing businesses to diagnose
                   operational gaps, design the infrastructure, and deploy the
                   systems that let companies scale without chaos — and
                   without everything routing through the owner.

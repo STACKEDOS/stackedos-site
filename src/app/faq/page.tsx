@@ -6,11 +6,11 @@ import { FAQItem } from '@/components/FAQItem'
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions — STACKED OS',
   description:
-    'Common questions about STACKED OS — how we work, what we build, and whether our business operating system is the right fit for your service company.',
+    'Common questions about STACKED OS — how we work, what we build, and whether our business operating system is the right fit for your company.',
   openGraph: {
     title: 'Frequently Asked Questions — STACKED OS',
     description:
-      'Everything you need to know about how STACKED OS works for growing service businesses.',
+      'Everything you need to know about how STACKED OS works for growing businesses.',
   },
 }
 
@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'What kind of businesses does STACKED OS work with?',
     answer:
-      'We work with growing service-based businesses — agencies, professional services firms, home services companies, consulting firms, and other service operators. The common thread is a business that has revenue, a team, and demand, but operations that haven\'t scaled with them.',
+      'We work with growing businesses that have revenue, a team, and demand — but operations that haven\'t scaled with their growth. That includes agencies, professional services firms, home services companies, consulting firms, e-commerce operators, SaaS companies, and other businesses where growth is creating operational drag. The common thread is the operational problem, not the industry.',
   },
   {
     question: 'What does "installing an operating system" actually mean?',
