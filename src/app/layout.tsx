@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'business systems',
     'process improvement',
     'workflow automation',
-    'CRM automation',
+    'pipeline automation',
     'AI-powered automation',
     'AI business systems',
     'scaling service businesses',

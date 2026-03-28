@@ -31,7 +31,7 @@ const painPoints = [
     icon: '05',
     title: 'Manual Overload',
     description:
-      'Your team spends hours on tasks that AI and automation should handle. Admin work eats into revenue-producing time.',
+      'Your team spends hours on tasks that systems and automation should handle. Admin work eats into revenue-producing time.',
   },
   {
     icon: '06',
