@@ -49,7 +49,7 @@ export function CTASection({
             href="/method"
             className={
               dark
-                ? 'btn-secondary !border-dark-600 !text-white hover:!border-dark-400'
+                ? 'inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-transparent border-2 border-brand-500 rounded-lg hover:bg-brand-700 hover:border-brand-700 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0'
                 : 'btn-secondary'
             }
           >

@@ -41,7 +41,7 @@ const phases = [
       'Workflow and automation architecture',
       'Dashboard and reporting framework',
       'SOP and knowledge base structure',
-      'Accountability and delegation model',
+      'Accountability and durability model',
     ],
     outcome:
       'A detailed, actionable blueprint for the operating system your business needs.',

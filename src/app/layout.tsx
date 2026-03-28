@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | STACKED OS',
   },
   description:
-    'We install operating systems for growing service businesses. Structure, tracking, automation, communication, knowledge, execution, and delegation — built to scale.',
+    'We install operating systems for growing service businesses. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
   keywords: [
     'business operating system',
     'service business operations',
@@ -19,12 +19,17 @@ export const metadata: Metadata = {
     'process improvement',
     'workflow automation',
     'CRM automation',
+    'AI-powered automation',
+    'AI business systems',
     'scaling service businesses',
     'standard operating procedures',
     'business infrastructure',
     'operational efficiency',
     'revenue operations',
   ],
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -33,12 +38,21 @@ export const metadata: Metadata = {
     title: 'STACKED OS — Business Operating Systems for Service Companies',
     description:
       'We install operating systems for growing service businesses. Run on systems instead of people.',
+    images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'STACKED OS — Business Operating Systems for Service Companies',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'STACKED OS — Business Operating Systems for Service Companies',
     description:
       'We install operating systems for growing service businesses. Run on systems instead of people.',
+    images: ['/og-image.svg'],
   },
   robots: {
     index: true,
@@ -51,6 +65,23 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://stackedos.com',
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'STACKED OS',
+  url: 'https://stackedos.com',
+  description:
+    'We install operating systems for growing service businesses. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'brandon@bowersgroupinc.com',
+    contactType: 'sales',
+  },
 }
 
 export default function RootLayout({
@@ -60,6 +91,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans">
         <Header />
         <main>{children}</main>

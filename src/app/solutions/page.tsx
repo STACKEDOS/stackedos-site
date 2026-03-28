@@ -83,13 +83,13 @@ const solutions = [
     ),
   },
   {
-    title: 'Team Accountability & Delegation Systems',
+    title: 'Team Accountability & Durability Systems',
     description:
-      'We build the structures that allow owners to offload, managers to own outcomes, and teams to execute with clarity. Clear decision rights, accountability frameworks, and performance visibility by role.',
+      'We build the structures that allow owners to offload, managers to own outcomes, and teams to execute with clarity. Clear decision rights, accountability frameworks, and performance visibility by role — creating operational durability that outlasts any single individual.',
     capabilities: [
       'Accountability and task management systems',
       'Manager enablement frameworks',
-      'Owner offloading and decision delegation',
+      'Owner offloading and operational durability',
       'Performance visibility by role and department',
       'Escalation and exception handling structures',
     ],

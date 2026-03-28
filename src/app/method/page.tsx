@@ -5,11 +5,11 @@ import { CTASection } from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'The STACKED Method — A 7-Layer Business Operating System Framework',
   description:
-    'Structure, Tracking, Automation, Communication, Knowledge, Execution, and Delegation. The STACKED method covers every operational layer a service business needs to scale.',
+    'Structure, Track, Automate, Clarity, Knowledge, Execution, and Durability. The STACKED method covers every operational layer a service business needs to scale.',
   openGraph: {
     title: 'The STACKED Method — 7-Layer Operating System Framework',
     description:
-      'The complete operational framework for service businesses. Seven layers that cover everything from structure to delegation.',
+      'The complete operational framework for service businesses. Seven layers that cover everything from structure to durability.',
   },
 }
 
@@ -32,7 +32,7 @@ const layers = [
   },
   {
     letter: 'T',
-    name: 'Tracking',
+    name: 'Track',
     tagline: 'Create visibility into reality.',
     description:
       'You can\'t manage what you can\'t see. Tracking gives leadership accurate, real-time visibility into pipeline health, revenue, team performance, and operational KPIs — replacing gut feelings with data.',
@@ -48,7 +48,7 @@ const layers = [
   },
   {
     letter: 'A',
-    name: 'Automation',
+    name: 'Automate',
     tagline: 'Eliminate manual execution where systems should act.',
     description:
       'Automation isn\'t about replacing people — it\'s about removing the manual tasks that slow your team down and create inconsistency. We automate follow-ups, integrations, triggers, and workflow enforcement so your operation runs reliably.',
@@ -64,15 +64,15 @@ const layers = [
   },
   {
     letter: 'C',
-    name: 'Communication',
+    name: 'Clarity',
     tagline: 'Improve internal clarity and handoffs.',
     description:
-      'Operational breakdowns are usually communication breakdowns. We fix handoffs between departments, clarify task ownership, and reduce the dropped balls that cost you clients and credibility.',
+      'Operational breakdowns are usually clarity breakdowns. We fix handoffs between departments, clarify task ownership, and reduce the dropped balls that cost you clients and credibility.',
     details: [
       'Clear task ownership and assignment systems',
       'Fewer dropped balls across teams and departments',
       'Better handoffs between sales, ops, fulfillment, and billing',
-      'Cleaner internal communication flows',
+      'Cleaner communication flows',
       'Escalation paths and notification rules',
     ],
     outcome: 'Smoother execution across the company.',
@@ -112,10 +112,10 @@ const layers = [
   },
   {
     letter: 'D',
-    name: 'Delegation',
-    tagline: 'Hand off responsibility without losing control.',
+    name: 'Durability',
+    tagline: 'Build a business that runs without dependency on any single person.',
     description:
-      'The final layer. Delegation is what allows the business to grow beyond its founder. We build the structures that let owners offload, managers own outcomes, and the business scale without everything routing back through one person.',
+      'The final layer. Durability is what allows the business to outlast and outgrow its founder. We build the structures that let owners offload, managers own outcomes, and the business scale without everything routing back through one person.',
     details: [
       'Owner offloading and time recovery',
       'Manager enablement and decision-making frameworks',
@@ -123,7 +123,7 @@ const layers = [
       'Reduced key-person dependency across the business',
       'Scalable accountability that doesn\'t require oversight on everything',
     ],
-    outcome: 'Growth without everything routing through the owner.',
+    outcome: 'The business grows without everything routing through the owner.',
     color: 'from-red-600 to-red-800',
   },
 ]

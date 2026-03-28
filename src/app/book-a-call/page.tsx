@@ -104,39 +104,38 @@ export default function BookACallPage() {
                   minutes.
                 </p>
 
-                {/* Calendar Embed Placeholder */}
-                <div className="bg-white rounded-xl border-2 border-dashed border-dark-200 p-12 text-center min-h-[400px] flex flex-col items-center justify-center">
-                  <svg
-                    className="w-12 h-12 text-dark-300 mb-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-dark-400 font-medium">
-                    Calendar Booking Widget
-                  </p>
-                  <p className="text-sm text-dark-400 mt-2">
-                    Embed your Calendly, Cal.com, or scheduling tool here
-                  </p>
-                </div>
-
-                <div className="mt-8 text-center">
-                  <p className="text-sm text-dark-500">
-                    Prefer email?{' '}
-                    <a
-                      href="mailto:hello@stackedos.com"
-                      className="font-semibold text-brand-700 hover:text-brand-800 transition-colors"
+                <div className="text-center space-y-8">
+                  <div className="bg-white rounded-xl border border-dark-200 p-10">
+                    <svg
+                      className="w-14 h-14 text-brand-700 mx-auto mb-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      hello@stackedos.com
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <h3 className="text-xl font-bold text-dark-900 mb-2">
+                      Reach out directly
+                    </h3>
+                    <p className="text-dark-500 mb-6">
+                      Send us a message and we&apos;ll get back to you within one
+                      business day to schedule your strategy call.
+                    </p>
+                    <a
+                      href="mailto:brandon@bowersgroupinc.com"
+                      className="btn-primary text-lg !py-4 !px-10 w-full sm:w-auto"
+                    >
+                      Email Us to Book a Call
                     </a>
-                  </p>
+                    <p className="mt-4 text-sm text-dark-400">
+                      brandon@bowersgroupinc.com
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

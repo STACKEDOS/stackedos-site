@@ -158,8 +158,8 @@ export default function AboutPage() {
             </h2>
             <p className="mt-6 text-lg text-dark-500 leading-relaxed">
               Structure supports tracking. Tracking enables automation.
-              Automation improves communication. Communication preserves
-              knowledge. Knowledge drives execution. Execution powers delegation.
+              Automation creates clarity. Clarity preserves
+              knowledge. Knowledge drives execution. Execution builds durability.
               Each layer builds on the last — creating an operational stack that
               compounds over time.
             </p>

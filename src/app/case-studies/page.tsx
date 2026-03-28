@@ -26,7 +26,7 @@ const caseStudies = [
       'Automated follow-ups reduced dropped balls by 90%',
       'Full SOP library for core operations',
     ],
-    layers: ['Structure', 'Tracking', 'Automation', 'Delegation'],
+    layers: ['Structure', 'Tracking', 'Automation', 'Durability'],
   },
   {
     industry: 'Home Services',
@@ -54,7 +54,7 @@ const caseStudies = [
       'Onboarding time cut by 60% with documented SOPs',
       'Clear accountability by role across all departments',
     ],
-    layers: ['Structure', 'Communication', 'Tracking', 'Knowledge'],
+    layers: ['Structure', 'Clarity', 'Tracking', 'Knowledge'],
   },
 ]
 
@@ -76,17 +76,6 @@ export default function CaseStudiesPage() {
               operational infrastructure that scales.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Disclaimer */}
-      <section className="bg-dark-50 py-4">
-        <div className="container-wide section-padding">
-          <p className="text-sm text-dark-400 text-center italic">
-            Case studies are representative examples based on common client
-            engagements. Specific details have been generalized for
-            confidentiality.
-          </p>
         </div>
       </section>
 
@@ -167,6 +156,9 @@ export default function CaseStudiesPage() {
               </div>
             ))}
           </div>
+          <p className="mt-12 text-xs text-dark-400 italic text-center">
+            Case studies are representative examples based on common client engagements. Specific details have been generalized for confidentiality.
+          </p>
         </div>
       </section>
 

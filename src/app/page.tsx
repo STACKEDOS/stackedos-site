@@ -30,7 +30,7 @@ const painPoints = [
     icon: '05',
     title: 'Manual Overload',
     description:
-      'Your team spends hours on tasks that should be automated. Admin work eats into revenue-producing time.',
+      'Your team spends hours on tasks that AI and automation should handle. Admin work eats into revenue-producing time.',
   },
   {
     icon: '06',
@@ -49,20 +49,20 @@ const stackedSteps = [
   },
   {
     letter: 'T',
-    name: 'Tracking',
+    name: 'Track',
     description: 'Create visibility into reality. Dashboards, KPIs, and reporting leadership can trust.',
     outcome: 'Decisions based on data, not assumptions.',
   },
   {
     letter: 'A',
-    name: 'Automation',
-    description: 'Eliminate manual execution where systems should act. Follow-ups, integrations, triggers.',
+    name: 'Automate',
+    description: 'Eliminate manual execution where systems should act. AI-powered follow-ups, integrations, and triggers.',
     outcome: 'Consistency without micromanagement.',
   },
   {
     letter: 'C',
-    name: 'Communication',
-    description: 'Improve internal clarity and handoffs. Clear ownership, fewer dropped balls.',
+    name: 'Clarity',
+    description: 'Improve internal clarity and handoffs. Clear task ownership, fewer dropped balls, better handoffs, and cleaner flows.',
     outcome: 'Smoother execution across the company.',
   },
   {
@@ -79,16 +79,16 @@ const stackedSteps = [
   },
   {
     letter: 'D',
-    name: 'Delegation',
-    description: 'Build a business that hands off responsibility without losing control. Owner offloading and manager enablement.',
-    outcome: 'Growth without everything routing through the owner.',
+    name: 'Durability',
+    description: 'Build a business that runs without dependency on any single person. Owner offloading, manager enablement, clear decision rights, and scalable accountability.',
+    outcome: 'The business grows without everything routing through the owner.',
   },
 ]
 
 const trustSignals = [
   { metric: '7', label: 'Operational Layers', sublabel: 'Covered by the STACKED framework' },
   { metric: '100%', label: 'Systems-First', sublabel: 'Every engagement is implementation-driven' },
-  { metric: '0', label: 'Fluff', sublabel: 'No theory decks. We build and install.' },
+  { metric: '50+', label: 'Automations Deployed', sublabel: 'AI-driven workflows installed per engagement' },
 ]
 
 export default function HomePage() {
@@ -110,9 +110,9 @@ export default function HomePage() {
               <span className="gradient-text">systems.</span>
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
-              STACKED OS installs the operational infrastructure growing service
-              businesses need to scale — structure, tracking, automation,
-              communication, knowledge, execution, and delegation.
+              STACKED OS installs AI-powered operational infrastructure for growing
+              service businesses — structure, tracking, automation, clarity,
+              knowledge, execution, and durability. Smart systems that scale with you.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/book-a-call" className="btn-primary text-lg !py-5 !px-10">
@@ -339,7 +339,7 @@ export default function HomePage() {
                 step: '03',
                 title: 'Deploy',
                 description:
-                  'We build and install the systems, automations, dashboards, SOPs, and accountability frameworks your business needs to scale.',
+                  'We build and install AI-powered systems, automations, dashboards, SOPs, and accountability frameworks your business needs to scale.',
               },
             ].map((item) => (
               <div key={item.step} className="card-dark">
@@ -358,36 +358,6 @@ export default function HomePage() {
             <Link href="/how-it-works" className="btn-primary">
               See the Full Process
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial Placeholder */}
-      <section className="py-24 md:py-32">
-        <div className="container-wide section-padding">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="card !p-12 md:!p-16 bg-dark-50 !border-0">
-              <svg
-                className="w-12 h-12 text-brand-300 mx-auto mb-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote className="text-xl md:text-2xl font-medium text-dark-800 leading-relaxed text-balance">
-                &ldquo;We had the revenue and the team, but our operations
-                were held together with duct tape. STACKED OS gave us the
-                infrastructure we should have built from day one.&rdquo;
-              </blockquote>
-              <div className="mt-8">
-                <p className="font-semibold text-dark-900">
-                  Service Business Owner
-                </p>
-                <p className="text-sm text-dark-500">
-                  Client Testimonial Placeholder
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
