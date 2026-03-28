@@ -99,7 +99,7 @@ export default function HomePage() {
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-50 via-white to-brand-50/30" />
         <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden lg:block">
-          <Image src="/symbol.png" alt="" width={600} height={600} />
+          <Image src="/stackedos-site/symbol.png" alt="" width={600} height={600} />
         </div>
         <div className="relative container-wide section-padding">
           <div className="max-w-4xl">

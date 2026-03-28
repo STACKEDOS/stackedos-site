@@ -21,7 +21,7 @@ export function Header() {
         <nav className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo-black.svg"
+              src="/stackedos-site/logo-black.svg"
               alt="STACKED OS"
               width={180}
               height={43}
