@@ -1,10 +1,1 @@
-node_modules
-.next
-out
-src
-package*.json
-tsconfig.json
-tailwind.config.ts
-postcss.config.js
-next.config.js
-.github
+node_modules\n.next\nout\nsrc\n*.ts\n*.tsx\npackage*.json\ntsconfig.json\ntailwind.config.ts\npostcss.config.js\nnext.config.js\n.github
