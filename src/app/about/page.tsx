@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CTASection } from '@/components/CTASection'
 
 export const metadata: Metadata = {
@@ -186,9 +187,13 @@ export default function AboutPage() {
 
             <div className="bg-dark-50 rounded-2xl p-10 md:p-12 flex items-center justify-center min-h-[400px]">
               <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-dark-200 mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-dark-400">BB</span>
-                </div>
+                <Image
+                  src="/brandon-headshot.jpg"
+                  alt="Brandon Bowers — Founder, STACKED OS"
+                  width={280}
+                  height={280}
+                  className="rounded-full mx-auto mb-6 object-cover w-64 h-64"
+                />
                 <p className="text-dark-900 font-bold text-xl">Brandon Bowers</p>
                 <p className="text-dark-500 mt-1">Founder, STACKED OS</p>
                 <p className="text-dark-400 text-sm mt-1">Bowers Group Inc.</p>
