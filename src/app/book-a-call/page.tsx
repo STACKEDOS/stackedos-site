@@ -106,10 +106,10 @@ export default function BookACallPage() {
 
                 <div className="bg-white rounded-xl overflow-hidden">
                   <iframe
-                    src="https://hub.stackedos.io/widget/booking/stackedos-diagnosis"
+                    src="https://api.leadconnectorhq.com/widget/booking/7l7H72Pa0jgRKxvksxSu"
                     style={{ width: '100%', minHeight: '600px', border: 'none', overflow: 'hidden' }}
                     scrolling="no"
-                    id="stackedos-diagnosis-iframe"
+                    id="msgsndr-calendar"
                     title="Schedule a STACKED OS Diagnosis Call"
                   />
                 </div>
@@ -119,7 +119,7 @@ export default function BookACallPage() {
         </div>
       </section>
 
-      <Script src="https://hub.stackedos.io/js/form_embed.js" strategy="lazyOnload" />
+      <Script src="https://link.msgsndr.com/js/embed.js" strategy="lazyOnload" />
     </>
   )
 }
