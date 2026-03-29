@@ -4,7 +4,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stackedos.com'),
+  metadataBase: new URL('https://stackedos.io'),
   title: {
     default: 'STACKED OS — Business Operating Systems for Growing Companies',
     template: '%s | STACKED OS',
@@ -28,20 +28,20 @@ export const metadata: Metadata = {
     'revenue operations',
   ],
   icons: {
-    icon: '/stackedos-site/favicon.png',
-    apple: '/stackedos-site/apple-touch-icon.png',
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://stackedos.com',
+    url: 'https://stackedos.io',
     siteName: 'STACKED OS',
     title: 'STACKED OS — Business Operating Systems for Growing Companies',
     description:
       'We install operating systems for growing businesses. Run on systems instead of people.',
     images: [
       {
-        url: '/stackedos-site/og-logo.png',
+        url: '/og-logo.png',
         width: 1200,
         height: 630,
         alt: 'STACKED OS — Business Operating Systems for Growing Companies',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'STACKED OS — Business Operating Systems for Growing Companies',
     description:
       'We install operating systems for growing businesses. Run on systems instead of people.',
-    images: ['/stackedos-site/og-logo.png'],
+    images: ['/og-logo.png'],
   },
   robots: {
     index: true,
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://stackedos.com',
+    canonical: 'https://stackedos.io',
   },
 }
 
@@ -75,7 +75,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'STACKED OS',
-  url: 'https://stackedos.com',
+  url: 'https://stackedos.io',
   description:
     'We install operating systems for growing businesses drowning in operational chaos. Structure, tracking, automation, clarity, knowledge, execution, and durability — built to scale.',
   contactPoint: {

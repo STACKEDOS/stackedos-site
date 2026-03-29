@@ -24,7 +24,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
               <Image
-                src="/stackedos-site/logo-white.svg"
+                src="/logo-white.svg"
                 alt="STACKED OS"
                 width={180}
                 height={43}
