@@ -9,6 +9,7 @@ const navigation = [
   { name: 'The Method', href: '/method' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'About', href: '/about' },
+  { name: 'Case Studies', href: '/case-studies' },
   { name: 'FAQ', href: '/faq' },
 ]
 
@@ -16,7 +17,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-dark-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[rgba(250,250,250,0.85)] backdrop-blur-xl border-b border-[rgba(0,0,0,0.06)]">
       <div className="container-wide section-padding">
         <nav className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
@@ -35,12 +36,12 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-dark-600 hover:text-dark-900 transition-colors"
+                className="text-sm font-normal text-dark-600 hover:text-dark-950 transition-colors"
               >
                 {item.name}
               </Link>
             ))}
-            <Link href="/book-a-call" className="btn-primary text-sm !py-3 !px-6">
+            <Link href="/book-a-call" className="btn-primary text-xs !py-2.5 !px-5 !rounded-md">
               Book a Diagnosis Call
             </Link>
           </div>
@@ -78,14 +79,14 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileOpen && (
-          <div className="lg:hidden pb-6 border-t border-dark-100 pt-4">
+          <div className="lg:hidden pb-6 border-t border-[rgba(0,0,0,0.06)] pt-4">
             <div className="flex flex-col gap-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-base font-medium text-dark-600 hover:text-dark-900 transition-colors"
+                  className="text-sm font-normal text-dark-600 hover:text-dark-950 transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -93,7 +94,7 @@ export function Header() {
               <Link
                 href="/book-a-call"
                 onClick={() => setMobileOpen(false)}
-                className="btn-primary text-sm !py-3 mt-2 text-center"
+                className="btn-primary text-xs !py-2.5 !px-5 !rounded-md mt-2 text-center"
               >
                 Book a Diagnosis Call
               </Link>

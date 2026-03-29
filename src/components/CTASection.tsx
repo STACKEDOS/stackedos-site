@@ -12,18 +12,21 @@ export function CTASection({
   dark = true,
 }: CTASectionProps) {
   return (
-    <section className={dark ? 'bg-dark-950' : 'bg-dark-50'}>
-      <div className="container-wide section-padding py-24 md:py-32 text-center">
+    <section className={`relative ${dark ? 'bg-dark-950' : 'bg-dark-50'}`}>
+      {dark && (
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(67,97,238,0.08),transparent_60%)]" />
+      )}
+      <div className="relative container-wide section-padding py-24 md:py-32 text-center">
         <h2
-          className={`text-3xl md:text-5xl font-bold tracking-tight text-balance ${
+          className={`text-3xl md:text-5xl font-bold tracking-tight text-balance max-w-2xl mx-auto ${
             dark ? 'text-white' : 'text-dark-900'
           }`}
         >
           {headline}
         </h2>
         <p
-          className={`mt-6 text-lg max-w-2xl mx-auto ${
-            dark ? 'text-dark-300' : 'text-dark-500'
+          className={`mt-4 text-base max-w-2xl mx-auto ${
+            dark ? 'text-dark-400' : 'text-dark-600'
           }`}
         >
           {subheadline}
@@ -49,7 +52,7 @@ export function CTASection({
             href="/method"
             className={
               dark
-                ? 'inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-transparent border-2 border-brand-500 rounded-lg hover:bg-brand-700 hover:border-brand-700 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0'
+                ? 'inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-transparent border border-[rgba(255,255,255,0.12)] rounded-lg hover:bg-white/5 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0'
                 : 'btn-secondary'
             }
           >

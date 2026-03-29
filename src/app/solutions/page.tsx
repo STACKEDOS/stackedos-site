@@ -118,12 +118,22 @@ const solutions = [
   },
 ]
 
+const sectionBgs: Record<number, { bg: string; dark: boolean }> = {
+  0: { bg: 'bg-white', dark: false },
+  1: { bg: 'bg-[#F5F5F7]', dark: false },
+  2: { bg: 'bg-white', dark: false },
+  3: { bg: 'bg-[#0A0A0F]', dark: true },
+  4: { bg: 'bg-white', dark: false },
+  5: { bg: 'bg-[#F5F5F7]', dark: false },
+}
+
 export default function SolutionsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-dark-50 via-white to-brand-50/30">
-        <div className="container-wide section-padding">
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-[#FAFAFA]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(67,97,238,0.06),transparent_60%)]" />
+        <div className="container-wide section-padding relative">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
               Solutions
@@ -141,57 +151,62 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Solutions Grid */}
-      <section className="py-24 md:py-32">
-        <div className="container-wide section-padding">
-          <div className="space-y-16">
-            {solutions.map((solution, index) => (
-              <div
-                key={solution.title}
-                className="card !p-8 md:!p-12 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12"
-              >
+      {/* Solutions — Individual Sections */}
+      {solutions.map((solution, index) => {
+        const { bg, dark } = sectionBgs[index]
+        return (
+          <section
+            key={solution.title}
+            className={`py-24 md:py-32 ${bg}`}
+          >
+            <div className="container-wide section-padding">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
                 <div className="lg:col-span-3">
-                  <div className="text-brand-700 mb-4">{solution.icon}</div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-dark-950">
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${dark ? 'bg-brand-700/20' : 'bg-brand-100'}`}>
+                    <div className="text-brand-700">{solution.icon}</div>
+                  </div>
+                  <h2 className={`text-2xl md:text-3xl font-bold ${dark ? 'text-[#FAFAFA]' : 'text-dark-950'}`}>
                     {solution.title}
                   </h2>
-                  <p className="mt-4 text-dark-500 leading-relaxed">
+                  <p className={`mt-4 text-[0.9375rem] leading-relaxed ${dark ? 'text-dark-400' : 'text-dark-500'}`}>
                     {solution.description}
                   </p>
                 </div>
                 <div className="lg:col-span-2">
-                  <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-4">
-                    Capabilities
-                  </h3>
-                  <ul className="space-y-3">
-                    {solution.capabilities.map((cap) => (
-                      <li key={cap} className="flex items-start gap-3 text-sm">
-                        <svg
-                          className="w-4 h-4 text-brand-700 shrink-0 mt-0.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="text-dark-600">{cap}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className={`rounded-xl p-8 border ${dark ? 'bg-[#12121A] border-[rgba(255,255,255,0.06)]' : 'bg-[#FAFAFA] border-[rgba(0,0,0,0.06)]'}`}>
+                    <h3 className={`text-sm font-semibold uppercase tracking-wider mb-4 ${dark ? 'text-[#F5F5F7]' : 'text-dark-900'}`}>
+                      Capabilities
+                    </h3>
+                    <ul className="space-y-3">
+                      {solution.capabilities.map((cap) => (
+                        <li key={cap} className="flex items-start gap-3 text-sm">
+                          <svg
+                            className={`w-4 h-4 shrink-0 mt-0.5 ${dark ? 'text-brand-400' : 'text-brand-700'}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className={dark ? 'text-dark-400' : 'text-dark-600'}>{cap}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        )
+      })}
 
       {/* Not a Fit */}
-      <section className="py-24 md:py-32 bg-dark-50">
+      <section className="py-24 md:py-32 bg-[#F5F5F7]">
         <div className="container-wide section-padding">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950">

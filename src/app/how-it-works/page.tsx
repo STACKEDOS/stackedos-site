@@ -85,8 +85,9 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-dark-50 via-white to-brand-50/30">
-        <div className="container-wide section-padding">
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-dark-50">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(67,97,238,0.08)_0%,_transparent_60%)]" />
+        <div className="container-wide section-padding relative">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
               How It Works
@@ -103,71 +104,232 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Process Phases */}
-      <section className="py-24 md:py-32">
+      {/* Phase 1 — Operational Diagnosis */}
+      <section className="py-24 md:py-32 bg-white">
         <div className="container-wide section-padding">
-          <div className="space-y-20">
-            {phases.map((phase, index) => (
-              <div
-                key={phase.phase}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20"
-              >
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-sm font-bold text-brand-700 uppercase tracking-widest">
-                      {phase.phase}
-                    </span>
-                    <span className="text-sm text-dark-400">
-                      {phase.duration}
-                    </span>
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-dark-950">
-                    {phase.title}
-                  </h2>
-                  <p className="mt-6 text-lg text-dark-500 leading-relaxed">
-                    {phase.description}
-                  </p>
-                  <div className="mt-8 p-4 rounded-xl bg-brand-50 border border-brand-100">
-                    <p className="text-sm font-semibold text-brand-800">
-                      Outcome
-                    </p>
-                    <p className="mt-1 text-brand-700">{phase.outcome}</p>
-                  </div>
-                </div>
-
-                <div className="bg-dark-50 rounded-2xl p-8">
-                  <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-6">
-                    Key Deliverables
-                  </h3>
-                  <ul className="space-y-4">
-                    {phase.deliverables.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <svg
-                          className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="text-dark-600">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-brand-700 uppercase tracking-widest">
+                  {phases[0].phase}
+                </span>
+                <span className="bg-brand-100 text-brand-700 rounded-md px-3 py-1 text-[0.8125rem] font-medium">
+                  {phases[0].duration}
+                </span>
               </div>
-            ))}
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-950">
+                {phases[0].title}
+              </h2>
+              <p className="mt-6 text-lg text-dark-500 leading-relaxed">
+                {phases[0].description}
+              </p>
+              <div className="mt-8 border-l-[3px] border-l-brand-700 bg-brand-50 rounded-r-lg p-5">
+                <p className="text-sm font-semibold text-brand-800">
+                  Outcome
+                </p>
+                <p className="mt-1 text-brand-700">{phases[0].outcome}</p>
+              </div>
+            </div>
+
+            <div className="bg-dark-100 rounded-xl p-8">
+              <h3 className="text-[0.6875rem] font-semibold text-dark-400 uppercase tracking-wider mb-6">
+                Key Deliverables
+              </h3>
+              <ul className="space-y-4">
+                {phases[0].deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-dark-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Phase 2 — System Design */}
+      <section className="py-24 md:py-32 bg-dark-100">
+        <div className="container-wide section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-brand-700 uppercase tracking-widest">
+                  {phases[1].phase}
+                </span>
+                <span className="bg-brand-100 text-brand-700 rounded-md px-3 py-1 text-[0.8125rem] font-medium">
+                  {phases[1].duration}
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-950">
+                {phases[1].title}
+              </h2>
+              <p className="mt-6 text-lg text-dark-500 leading-relaxed">
+                {phases[1].description}
+              </p>
+              <div className="mt-8 border-l-[3px] border-l-brand-700 bg-brand-50 rounded-r-lg p-5">
+                <p className="text-sm font-semibold text-brand-800">
+                  Outcome
+                </p>
+                <p className="mt-1 text-brand-700">{phases[1].outcome}</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-8">
+              <h3 className="text-[0.6875rem] font-semibold text-dark-400 uppercase tracking-wider mb-6">
+                Key Deliverables
+              </h3>
+              <ul className="space-y-4">
+                {phases[1].deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-dark-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Phase 3 — Build & Deploy (DARK climax) */}
+      <section className="py-24 md:py-32 bg-dark-950">
+        <div className="container-wide section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-brand-700 uppercase tracking-widest">
+                  {phases[2].phase}
+                </span>
+                <span className="bg-brand-100 text-brand-700 rounded-md px-3 py-1 text-[0.8125rem] font-medium">
+                  {phases[2].duration}
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-50">
+                {phases[2].title}
+              </h2>
+              <p className="mt-6 text-lg text-dark-400 leading-relaxed">
+                {phases[2].description}
+              </p>
+              <div className="mt-8 border-l-[3px] border-l-brand-700 bg-brand-700/10 rounded-r-lg p-5">
+                <p className="text-sm font-semibold text-brand-400">
+                  Outcome
+                </p>
+                <p className="mt-1 text-brand-300">{phases[2].outcome}</p>
+              </div>
+            </div>
+
+            <div className="bg-dark-900 rounded-xl p-8">
+              <h3 className="text-[0.6875rem] font-semibold text-dark-400 uppercase tracking-wider mb-6">
+                Key Deliverables
+              </h3>
+              <ul className="space-y-4">
+                {phases[2].deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-dark-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Phase 4 — Optimization & Support */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container-wide section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-brand-700 uppercase tracking-widest">
+                  {phases[3].phase}
+                </span>
+                <span className="bg-brand-100 text-brand-700 rounded-md px-3 py-1 text-[0.8125rem] font-medium">
+                  {phases[3].duration}
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-950">
+                {phases[3].title}
+              </h2>
+              <p className="mt-6 text-lg text-dark-500 leading-relaxed">
+                {phases[3].description}
+              </p>
+              <div className="mt-8 border-l-[3px] border-l-brand-700 bg-brand-50 rounded-r-lg p-5">
+                <p className="text-sm font-semibold text-brand-800">
+                  Outcome
+                </p>
+                <p className="mt-1 text-brand-700">{phases[3].outcome}</p>
+              </div>
+            </div>
+
+            <div className="bg-dark-100 rounded-xl p-8">
+              <h3 className="text-[0.6875rem] font-semibold text-dark-400 uppercase tracking-wider mb-6">
+                Key Deliverables
+              </h3>
+              <ul className="space-y-4">
+                {phases[3].deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-dark-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Differentiator */}
-      <section className="py-24 md:py-32 bg-dark-50">
+      <section className="py-24 md:py-32 bg-dark-100">
         <div className="container-wide section-padding">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950">
@@ -182,7 +344,7 @@ export default function HowItWorksPage() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="card !p-8">
+            <div className="bg-white rounded-xl border border-[rgba(0,0,0,0.06)] shadow-card p-8">
               <h3 className="text-lg font-bold text-dark-400 line-through mb-4">
                 Traditional Consulting
               </h3>
@@ -214,7 +376,7 @@ export default function HowItWorksPage() {
               </ul>
             </div>
 
-            <div className="card !p-8 !border-brand-200 !bg-brand-50/50">
+            <div className="bg-white rounded-xl border border-brand-200 border-t-[3px] border-t-brand-700 shadow-card p-8">
               <h3 className="text-lg font-bold text-brand-800 mb-4">
                 STACKED OS
               </h3>

@@ -71,7 +71,7 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-dark-50 via-white to-brand-50/30">
+      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-dark-50" style={{ background: 'radial-gradient(ellipse at 30% 0%, rgba(67,97,238,0.06) 0%, #FAFAFA 70%)' }}>
         <div className="container-wide section-padding">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
@@ -89,7 +89,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ List */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-dark-50">
         <div className="container-narrow section-padding">
           <div>
             {faqs.map((faq) => (
@@ -97,11 +97,12 @@ export default function FAQPage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-dark-500">
+          {/* CTA Card */}
+          <div className="bg-dark-950 rounded-2xl p-8 md:p-12 text-center mt-12">
+            <p className="text-dark-50 font-medium">
               Have a question that isn&apos;t answered here?
             </p>
-            <Link href="/book-a-call" className="btn-dark mt-6">
+            <Link href="/book-a-call" className="btn-primary mt-6 inline-block">
               Ask Us on a Diagnosis Call
             </Link>
           </div>

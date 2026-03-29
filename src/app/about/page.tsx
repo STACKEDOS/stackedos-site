@@ -41,8 +41,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-dark-50 via-white to-brand-50/30">
-        <div className="container-wide section-padding">
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-dark-50">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(67,97,238,0.08)_0%,_transparent_60%)]" />
+        <div className="container-wide section-padding relative">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
               About STACKED OS
@@ -60,7 +61,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-white">
         <div className="container-wide section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -86,27 +87,27 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-dark-950 rounded-2xl p-10 md:p-12 text-white">
+            <div className="bg-dark-950 rounded-2xl p-10 md:p-12 text-white border border-[rgba(255,255,255,0.06)]">
               <h3 className="text-2xl font-bold mb-6">Our positioning</h3>
-              <div className="space-y-6">
+              <div>
                 <div>
-                  <p className="text-sm font-semibold text-brand-400 uppercase tracking-wider mb-2">
+                  <p className="text-[0.6875rem] font-semibold text-brand-700 uppercase tracking-widest mb-2">
                     What We Do
                   </p>
                   <p className="text-dark-200 text-lg">
                     We install operational infrastructure for businesses where growth has outpaced operations.
                   </p>
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-brand-400 uppercase tracking-wider mb-2">
+                <div className="border-t border-[rgba(255,255,255,0.06)] pt-6 mt-6">
+                  <p className="text-[0.6875rem] font-semibold text-brand-700 uppercase tracking-widest mb-2">
                     Who It&apos;s For
                   </p>
                   <p className="text-dark-200 text-lg">
                     Companies with revenue, a team, and demand — but operations that haven&apos;t scaled with their growth.
                   </p>
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-brand-400 uppercase tracking-wider mb-2">
+                <div className="border-t border-[rgba(255,255,255,0.06)] pt-6 mt-6">
+                  <p className="text-[0.6875rem] font-semibold text-brand-700 uppercase tracking-widest mb-2">
                     How We&apos;re Different
                   </p>
                   <p className="text-dark-200 text-lg">
@@ -121,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 md:py-32 bg-dark-50">
+      <section className="py-24 md:py-32 bg-dark-100">
         <div className="container-wide section-padding">
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950">
@@ -135,8 +136,11 @@ export default function AboutPage() {
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value) => (
-              <div key={value.title} className="card">
-                <h3 className="text-xl font-bold text-dark-950">
+              <div
+                key={value.title}
+                className="bg-white rounded-xl border border-[rgba(0,0,0,0.06)] border-t-[3px] border-t-brand-700 shadow-card p-8 transition-all duration-200 hover:shadow-card-hover hover:-translate-y-1"
+              >
+                <h3 className="text-xl font-semibold text-dark-950">
                   {value.title}
                 </h3>
                 <p className="mt-4 text-dark-500 leading-relaxed">
@@ -149,17 +153,30 @@ export default function AboutPage() {
       </section>
 
       {/* Founder */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-dark-950 border-t border-[rgba(255,255,255,0.06)]">
         <div className="container-wide section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
+              <Image
+                src="/brandon-headshot.jpg"
+                alt="Brandon Bowers — Founder, STACKED OS"
+                width={400}
+                height={400}
+                className="rounded-2xl w-full max-w-[400px] object-cover shadow-2xl"
+              />
+            </div>
+
+            <div>
+              <p className="text-xs font-bold text-brand-700 uppercase tracking-widest mb-4">
                 The Founder
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-50">
                 Brandon Bowers
               </h2>
-              <div className="mt-8 space-y-6 text-lg text-dark-600 leading-relaxed">
+              <p className="text-base text-dark-500 mt-2">
+                Founder, STACKED OS
+              </p>
+              <div className="mt-8 space-y-6 text-base text-dark-400 leading-relaxed">
                 <p>
                   Brandon built STACKED OS after spending years inside
                   growing companies watching the same pattern repeat:
@@ -183,28 +200,14 @@ export default function AboutPage() {
                   without everything routing through the owner.
                 </p>
               </div>
-            </div>
-
-            <div className="bg-dark-50 rounded-2xl p-10 md:p-12 flex items-center justify-center min-h-[400px]">
-              <div className="text-center">
-                <Image
-                  src="/brandon-headshot.jpg"
-                  alt="Brandon Bowers — Founder, STACKED OS"
-                  width={280}
-                  height={280}
-                  className="rounded-full mx-auto mb-6 object-cover w-64 h-64"
-                />
-                <p className="text-dark-900 font-bold text-xl">Brandon Bowers</p>
-                <p className="text-dark-500 mt-1">Founder, STACKED OS</p>
-                <p className="text-dark-400 text-sm mt-1">Bowers Group Inc.</p>
-              </div>
+              <p className="text-xs text-dark-500 mt-6">Bowers Group Inc.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why STACKED */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-white">
         <div className="container-wide section-padding">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-dark-950 text-balance">

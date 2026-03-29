@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function BookACallPage() {
   return (
     <>
-      <section className="pt-32 pb-20 md:pt-44 md:pb-32">
+      <section className="pt-32 pb-20 md:pt-44 md:pb-32 bg-dark-50">
         <div className="container-wide section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Left: Info */}
@@ -33,8 +33,8 @@ export default function BookACallPage() {
                 approach makes sense for your business.
               </p>
 
-              <div className="mt-12 space-y-8">
-                <h2 className="text-xl font-bold text-dark-900">
+              <div className="mt-12 space-y-4">
+                <h2 className="text-xl font-bold text-dark-900 mb-4">
                   What to expect:
                 </h2>
                 {[
@@ -54,33 +54,39 @@ export default function BookACallPage() {
                       'We\'ll be honest about whether STACKED OS is the right solution — and if so, what an engagement would look like.',
                   },
                 ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand-100 shrink-0 mt-1">
-                      <svg
-                        className="w-4 h-4 text-brand-700"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-dark-900">
-                        {item.title}
-                      </h3>
-                      <p className="mt-1 text-dark-500">{item.description}</p>
+                  <div key={item.title} className="bg-white rounded-lg border border-[rgba(0,0,0,0.06)] p-4 mb-2">
+                    <div className="flex items-start gap-4">
+                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand-100 shrink-0 mt-1">
+                        <svg
+                          className="w-4 h-4 text-brand-700"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-dark-900">
+                          {item.title}
+                        </h3>
+                        <p className="mt-1 text-dark-500">{item.description}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-12 p-6 rounded-xl bg-dark-50">
+              <p className="text-[0.8125rem] text-dark-400 mt-8">
+                30-minute call · No sales pitch · Honest assessment
+              </p>
+
+              <div className="mt-12 bg-dark-100 rounded-xl p-6 border border-[rgba(0,0,0,0.06)]">
                 <p className="text-sm font-semibold text-dark-900 mb-2">
                   Best fit for this call:
                 </p>
@@ -95,16 +101,16 @@ export default function BookACallPage() {
 
             {/* Right: Calendar Embed */}
             <div>
-              <div className="bg-dark-50 rounded-2xl p-4 md:p-6 border border-dark-100">
-                <h2 className="text-2xl font-bold text-dark-950 mb-2">
+              <div className="bg-dark-950 rounded-2xl p-6 border border-[rgba(255,255,255,0.06)]">
+                <h2 className="text-xl font-semibold text-dark-50 mb-2">
                   Schedule Your Diagnosis Call
                 </h2>
-                <p className="text-dark-500 mb-6">
+                <p className="text-sm text-dark-400 mb-6">
                   Choose a time that works for you. Calls typically run 30
                   minutes.
                 </p>
 
-                <div className="bg-white rounded-xl overflow-hidden">
+                <div className="rounded-xl overflow-hidden">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/booking/7l7H72Pa0jgRKxvksxSu"
                     style={{ width: '100%', minHeight: '600px', border: 'none', overflow: 'hidden' }}

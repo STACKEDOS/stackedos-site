@@ -128,12 +128,23 @@ const layers = [
   },
 ]
 
+const sectionBgs: Record<number, { bg: string; dark: boolean }> = {
+  0: { bg: 'bg-white', dark: false },
+  1: { bg: 'bg-[#F5F5F7]', dark: false },
+  2: { bg: 'bg-white', dark: false },
+  3: { bg: 'bg-[#0A0A0F]', dark: true },
+  4: { bg: 'bg-white', dark: false },
+  5: { bg: 'bg-[#F5F5F7]', dark: false },
+  6: { bg: 'bg-[#0A0A0F]', dark: true },
+}
+
 export default function MethodPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-dark-50 via-white to-brand-50/30">
-        <div className="container-wide section-padding">
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-[#FAFAFA]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(67,97,238,0.06),transparent_60%)]" />
+        <div className="container-wide section-padding relative">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
               The STACKED Method
@@ -153,51 +164,53 @@ export default function MethodPage() {
       </section>
 
       {/* Layers */}
-      <section className="py-24 md:py-32">
-        <div className="container-wide section-padding">
-          <div className="space-y-24">
-            {layers.map((layer, index) => (
-              <div
-                key={layer.letter}
-                id={layer.name.toLowerCase()}
-                className="scroll-mt-28"
-              >
+      <div className="relative">
+        {/* Connecting vertical line behind badges */}
+        <div className="absolute left-[calc(50%-36rem+1.5rem)] top-0 bottom-0 w-0.5 bg-brand-700/15 hidden lg:block" style={{ left: 'max(2rem, calc(50% - 36rem + 1.5rem))' }} />
+
+        {layers.map((layer, index) => {
+          const { bg, dark } = sectionBgs[index]
+          return (
+            <section
+              key={layer.letter}
+              id={layer.name.toLowerCase()}
+              className={`scroll-mt-28 py-24 md:py-32 ${bg}`}
+            >
+              <div className="container-wide section-padding">
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                   {/* Left: Content */}
                   <div className="lg:col-span-3">
                     <div className="flex items-center gap-4 mb-6">
-                      <span
-                        className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${layer.color} text-white font-bold text-xl`}
-                      >
+                      <span className="relative z-10 flex items-center justify-center w-12 h-12 rounded-[10px] bg-brand-700 text-white font-bold text-xl">
                         {layer.letter}
                       </span>
                       <div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-dark-950">
+                        <h2 className={`text-3xl md:text-4xl font-bold ${dark ? 'text-[#FAFAFA]' : 'text-dark-950'}`}>
                           {layer.name}
                         </h2>
-                        <p className="text-dark-500">{layer.tagline}</p>
+                        <p className={`text-base mt-2 ${dark ? 'text-dark-400' : 'text-dark-400'}`}>{layer.tagline}</p>
                       </div>
                     </div>
 
-                    <p className="text-lg text-dark-600 leading-relaxed">
+                    <p className={`text-lg leading-relaxed ${dark ? 'text-dark-400' : 'text-dark-600'}`}>
                       {layer.description}
                     </p>
                   </div>
 
                   {/* Right: Details */}
                   <div className="lg:col-span-2">
-                    <div className="bg-dark-50 rounded-2xl p-8">
-                      <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-4">
+                    <div className={`rounded-xl p-8 border ${dark ? 'bg-[#12121A] border-[rgba(255,255,255,0.06)]' : 'bg-[#FAFAFA] border-[rgba(0,0,0,0.06)]'}`}>
+                      <h3 className={`text-sm font-semibold uppercase tracking-wider mb-4 ${dark ? 'text-[#F5F5F7]' : 'text-dark-900'}`}>
                         What We Build
                       </h3>
                       <ul className="space-y-3">
                         {layer.details.map((detail) => (
                           <li
                             key={detail}
-                            className="flex items-start gap-3 text-sm"
+                            className="flex items-start gap-3 text-[0.9375rem]"
                           >
                             <svg
-                              className="w-4 h-4 text-brand-700 shrink-0 mt-0.5"
+                              className={`w-4 h-4 shrink-0 mt-0.5 ${dark ? 'text-brand-400' : 'text-brand-700'}`}
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -209,28 +222,24 @@ export default function MethodPage() {
                                 d="M5 13l4 4L19 7"
                               />
                             </svg>
-                            <span className="text-dark-600">{detail}</span>
+                            <span className={dark ? 'text-dark-400' : 'text-dark-600'}>{detail}</span>
                           </li>
                         ))}
                       </ul>
 
-                      <div className="mt-6 pt-6 border-t border-dark-200">
-                        <p className="text-sm font-semibold text-brand-700">
+                      <div className={`mt-4 pt-4 border-t ${dark ? 'border-[rgba(255,255,255,0.06)]' : 'border-[rgba(0,0,0,0.06)]'}`}>
+                        <p className="text-[0.9375rem] font-semibold text-brand-700 italic">
                           Outcome: {layer.outcome}
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                {index < layers.length - 1 && (
-                  <div className="mt-24 border-b border-dark-100" />
-                )}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </section>
+          )
+        })}
+      </div>
 
       {/* Summary */}
       <section className="py-24 md:py-32 bg-dark-50">

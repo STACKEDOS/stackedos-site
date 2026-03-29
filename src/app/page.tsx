@@ -96,14 +96,14 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-50 via-white to-brand-50/30" />
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-dark-50">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(67,97,238,0.06),transparent)]" />
         <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden lg:block">
           <Image src="/symbol.png" alt="" width={600} height={600} />
         </div>
         <div className="relative container-wide section-padding">
           <div className="max-w-4xl">
-            <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
+            <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6 max-w-[500px]">
               Business Operating Systems for Companies That Have Outgrown Informal Management
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-dark-950 text-balance">
@@ -144,15 +144,18 @@ export default function HomePage() {
       </section>
 
       {/* Social Proof Bar */}
-      <section className="bg-dark-950 py-16">
+      <section className="bg-dark-950 py-20">
         <div className="container-wide section-padding">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {trustSignals.map((signal) => (
-              <div key={signal.label} className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+            {trustSignals.map((signal, index) => (
+              <div
+                key={signal.label}
+                className={`text-center ${index > 0 ? 'md:border-l md:border-[rgba(255,255,255,0.08)] md:pl-12' : ''}`}
+              >
+                <p className="text-5xl md:text-6xl font-bold tracking-tight text-white">
                   {signal.metric}
                 </p>
-                <p className="mt-2 text-sm font-semibold text-dark-300 uppercase tracking-wider">
+                <p className="mt-2 text-xs font-semibold text-dark-400 uppercase tracking-wider">
                   {signal.label}
                 </p>
                 <p className="mt-1 text-sm text-dark-500">{signal.sublabel}</p>
@@ -163,16 +166,16 @@ export default function HomePage() {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-dark-950">
         <div className="container-wide section-padding">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
               The Problem
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-dark-950 text-balance">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white text-balance">
               Your business is growing. Your operations aren&apos;t.
             </h2>
-            <p className="mt-6 text-lg text-dark-500 max-w-2xl">
+            <p className="mt-6 text-lg text-dark-400 max-w-2xl">
               You have revenue. You have a team. You have demand. But the
               business is still too dependent on tribal knowledge, manual
               processes, and individual effort.
@@ -181,14 +184,17 @@ export default function HomePage() {
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {painPoints.map((point) => (
-              <div key={point.title} className="card group">
-                <span className="text-xs font-bold text-brand-600 tracking-widest">
+              <div
+                key={point.title}
+                className="bg-dark-900 border border-[rgba(255,255,255,0.06)] border-t-[1px] border-t-[rgba(67,97,238,0.2)] rounded-xl p-8 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:-translate-y-0.5 group"
+              >
+                <span className="text-xs font-bold text-brand-700 tracking-widest">
                   {point.icon}
                 </span>
-                <h3 className="mt-4 text-xl font-bold text-dark-900">
+                <h3 className="mt-4 text-xl font-semibold text-dark-50">
                   {point.title}
                 </h3>
-                <p className="mt-3 text-dark-500 leading-relaxed">
+                <p className="mt-3 text-[0.9375rem] text-dark-400 leading-relaxed">
                   {point.description}
                 </p>
               </div>
@@ -198,7 +204,7 @@ export default function HomePage() {
       </section>
 
       {/* STACKED Method Preview */}
-      <section className="py-24 md:py-32 bg-dark-50">
+      <section className="py-24 md:py-32 bg-dark-100">
         <div className="container-wide section-padding">
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-4">
@@ -213,26 +219,31 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-16 space-y-4">
-            {stackedSteps.map((step, index) => (
-              <div
-                key={step.letter}
-                className="card !p-6 md:!p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
-              >
-                <div className="flex items-center gap-4 md:min-w-[200px]">
-                  <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-brand-700 text-white font-bold text-lg shrink-0">
-                    {step.letter}
-                  </span>
-                  <h3 className="text-xl font-bold text-dark-900">
-                    {step.name}
-                  </h3>
+          <div className="mt-16 relative">
+            {/* Connecting vertical line */}
+            <div className="absolute left-[1.75rem] top-6 bottom-6 w-0.5 bg-brand-700/15 hidden md:block" />
+
+            <div className="space-y-3">
+              {stackedSteps.map((step, index) => (
+                <div
+                  key={step.letter}
+                  className="relative z-10 bg-white border border-[rgba(0,0,0,0.06)] rounded-xl p-5 md:p-6 shadow-card transition-all duration-200 hover:border-[rgba(67,97,238,0.2)] hover:shadow-card-hover hover:-translate-y-0.5 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                >
+                  <div className="flex items-center gap-4 md:min-w-[200px]">
+                    <span className="flex items-center justify-center w-12 h-12 rounded-[10px] bg-brand-700 text-white font-bold text-xl shrink-0">
+                      {step.letter}
+                    </span>
+                    <h3 className="text-xl font-semibold text-dark-950">
+                      {step.name}
+                    </h3>
+                  </div>
+                  <p className="text-[0.9375rem] text-dark-600 md:flex-1">{step.description}</p>
+                  <p className="text-sm font-medium text-brand-700 italic md:min-w-[280px] md:text-right">
+                    {step.outcome}
+                  </p>
                 </div>
-                <p className="text-dark-500 md:flex-1">{step.description}</p>
-                <p className="text-sm font-semibold text-brand-700 md:min-w-[280px] md:text-right">
-                  {step.outcome}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 text-center">
@@ -257,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* Who It's For */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-dark-50">
         <div className="container-wide section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -290,10 +301,10 @@ export default function HomePage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-dark-50"
+                  className="flex items-start gap-4 p-4 rounded-lg bg-white border border-[rgba(0,0,0,0.06)] transition-colors duration-200 hover:bg-dark-100"
                 >
                   <svg
-                    className="w-6 h-6 text-brand-700 shrink-0 mt-0.5"
+                    className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -305,7 +316,7 @@ export default function HomePage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <p className="text-dark-700">{item}</p>
+                  <p className="text-[0.9375rem] text-dark-950 font-normal">{item}</p>
                 </div>
               ))}
             </div>
@@ -346,12 +357,15 @@ export default function HomePage() {
                   'We build and install the systems, automations, dashboards, SOPs, and accountability frameworks your business needs to scale.',
               },
             ].map((item) => (
-              <div key={item.step} className="card-dark">
-                <span className="text-sm font-bold text-brand-400 tracking-widest">
+              <div
+                key={item.step}
+                className="bg-dark-900 border border-[rgba(255,255,255,0.06)] rounded-xl p-8 md:p-10 transition-all duration-200 hover:border-[rgba(67,97,238,0.3)]"
+              >
+                <span className="text-xs font-semibold text-brand-700 tracking-widest">
                   Step {item.step}
                 </span>
-                <h3 className="mt-4 text-2xl font-bold">{item.title}</h3>
-                <p className="mt-4 text-dark-300 leading-relaxed">
+                <h3 className="mt-4 text-2xl font-semibold text-dark-50">{item.title}</h3>
+                <p className="mt-4 text-[0.9375rem] text-dark-400 leading-relaxed">
                   {item.description}
                 </p>
               </div>

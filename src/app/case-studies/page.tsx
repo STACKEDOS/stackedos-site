@@ -27,6 +27,8 @@ const caseStudies = [
       'Full SOP library for core operations',
     ],
     layers: ['Structure', 'Tracking', 'Automation', 'Durability'],
+    heroMetric: '20+',
+    heroSublabel: 'hours/week reclaimed',
   },
   {
     industry: 'Home Services',
@@ -41,6 +43,8 @@ const caseStudies = [
       'Manager enablement reduced escalations by 70%',
     ],
     layers: ['Structure', 'Automation', 'Knowledge', 'Execution'],
+    heroMetric: '2.5x',
+    heroSublabel: 'revenue growth',
   },
   {
     industry: 'Marketing Agency',
@@ -55,6 +59,8 @@ const caseStudies = [
       'Clear accountability by role across all departments',
     ],
     layers: ['Structure', 'Clarity', 'Tracking', 'Knowledge'],
+    heroMetric: '60%',
+    heroSublabel: 'faster onboarding',
   },
 ]
 
@@ -62,7 +68,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-dark-50 via-white to-brand-50/30">
+      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-dark-50" style={{ background: 'radial-gradient(ellipse at 30% 0%, rgba(67,97,238,0.06) 0%, #FAFAFA 70%)' }}>
         <div className="container-wide section-padding">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
@@ -80,83 +86,102 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-white">
         <div className="container-wide section-padding">
-          <div className="space-y-20">
+          <div className="space-y-0">
             {caseStudies.map((study, index) => (
-              <div
-                key={study.title}
-                className="card !p-8 md:!p-12"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-bold text-brand-700 uppercase tracking-widest bg-brand-50 px-3 py-1 rounded-full">
-                    {study.industry}
-                  </span>
-                </div>
-
-                <h2 className="text-2xl md:text-3xl font-bold text-dark-950 text-balance">
-                  {study.title}
-                </h2>
-
-                <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                  <div>
-                    <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-3">
-                      The Challenge
-                    </h3>
-                    <p className="text-dark-500 leading-relaxed">
-                      {study.challenge}
-                    </p>
-
-                    <div className="mt-6">
-                      <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-3">
-                        STACKED Layers Applied
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {study.layers.map((layer) => (
-                          <span
-                            key={layer}
-                            className="text-xs font-semibold text-brand-700 bg-brand-50 border border-brand-100 px-3 py-1 rounded-full"
-                          >
-                            {layer}
-                          </span>
-                        ))}
-                      </div>
+              <div key={study.title}>
+                <div
+                  className="bg-white rounded-2xl border border-[rgba(0,0,0,0.06)] shadow-card-lg p-8 md:p-12 mb-12"
+                >
+                  {/* Hero Metric */}
+                  <div className="mb-8">
+                    <div className="text-4xl md:text-5xl font-bold text-brand-700 tracking-tight">
+                      {study.heroMetric}
+                    </div>
+                    <div className="text-sm text-dark-400 font-medium mt-1">
+                      {study.heroSublabel}
                     </div>
                   </div>
 
-                  <div className="bg-dark-50 rounded-xl p-6">
-                    <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-4">
-                      Results
-                    </h3>
-                    <ul className="space-y-3">
-                      {study.results.map((result) => (
-                        <li
-                          key={result}
-                          className="flex items-start gap-3"
-                        >
-                          <svg
-                            className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                  {/* Category Badge */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="bg-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
+                      {study.industry}
+                    </span>
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl font-bold text-dark-950 text-balance">
+                    {study.title}
+                  </h2>
+
+                  <div className={`mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 ${index % 2 === 1 ? 'lg:direction-rtl' : ''}`}>
+                    {/* Text Column */}
+                    <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                      <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-3">
+                        The Challenge
+                      </h3>
+                      <p className="text-dark-500 leading-relaxed">
+                        {study.challenge}
+                      </p>
+
+                      <div className="mt-6">
+                        <h3 className="text-sm font-semibold text-dark-900 uppercase tracking-wider mb-3">
+                          STACKED Layers Applied
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {study.layers.map((layer) => (
+                            <span
+                              key={layer}
+                              className="bg-brand-50 text-brand-700 text-xs font-medium px-3 py-1 rounded-md border border-brand-200"
+                            >
+                              {layer}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Results Column */}
+                    <div className={`bg-dark-100 rounded-xl p-8 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                      <p className="text-[0.6875rem] uppercase tracking-wider text-dark-400 mb-4">
+                        RESULTS
+                      </p>
+                      <ul className="space-y-3">
+                        {study.results.map((result) => (
+                          <li
+                            key={result}
+                            className="flex items-start gap-3"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          <span className="text-dark-700">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
+                            <svg
+                              className="w-5 h-5 text-brand-700 shrink-0 mt-0.5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                            <span className="text-[0.9375rem] text-dark-950 font-normal">{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
+
+                {/* Visual Separator (between cards, not after the last one) */}
+                {index < caseStudies.length - 1 && (
+                  <div className="max-w-[200px] mx-auto h-px bg-gradient-to-r from-transparent via-brand-700/30 to-transparent mb-12" />
+                )}
               </div>
             ))}
           </div>
-          <p className="mt-12 text-xs text-dark-400 italic text-center">
+          <p className="text-xs text-dark-400 italic text-center mt-8">
             Results are representative of typical STACKED OS engagements. Details generalized for confidentiality.
           </p>
         </div>
