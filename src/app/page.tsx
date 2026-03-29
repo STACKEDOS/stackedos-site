@@ -89,7 +89,7 @@ const stackedSteps = [
 const trustSignals = [
   { metric: '7', label: 'Operational Layers', sublabel: 'Covered by the STACKED framework' },
   { metric: '100%', label: 'Systems-First', sublabel: 'Every engagement is implementation-driven' },
-  { metric: '50+', label: 'Automations Deployed', sublabel: 'Workflows installed per engagement' },
+  { metric: '8–12', label: 'Weeks to Operational', sublabel: 'From diagnosis to live infrastructure' },
 ]
 
 export default function HomePage() {
