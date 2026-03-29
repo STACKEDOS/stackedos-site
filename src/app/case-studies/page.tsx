@@ -164,7 +164,7 @@ export default function CaseStudiesPage() {
 
       <CTASection
         headline="Ready to build your operating system?"
-        subheadline="Book a strategy call to see what STACKED OS could look like for your business."
+        subheadline="If this resonates, the next step is a diagnosis conversation about your business."
       />
     </>
   )

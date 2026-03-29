@@ -198,12 +198,12 @@ export default function SolutionsPage() {
               Not sure which solution you need?
             </h2>
             <p className="mt-6 text-lg text-dark-500">
-              That&apos;s what the strategy call is for. We&apos;ll diagnose
+              That&apos;s what the diagnosis call is for. We&apos;ll identify
               your operational gaps and recommend exactly where to start based on
               your business model, team size, and growth stage.
             </p>
             <Link href="/book-a-call" className="btn-dark mt-10">
-              Book a Strategy Call
+              Book a Diagnosis Call
             </Link>
           </div>
         </div>

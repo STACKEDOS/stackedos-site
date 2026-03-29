@@ -120,7 +120,7 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/book-a-call" className="btn-primary text-lg !py-5 !px-10">
-                Book a Strategy Call
+                Book a Diagnosis Call
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"

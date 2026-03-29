@@ -46,14 +46,14 @@ const faqs = [
       'Not necessarily. We audit what you have and optimize it first. If your current tools can support what your business needs, we\'ll build on them. If there\'s a clear case for switching, we\'ll explain why and handle the migration.',
   },
   {
-    question: 'What does the strategy call involve?',
+    question: 'What does the diagnosis call involve?',
     answer:
       'It\'s a 30-minute conversation where we learn about your business, understand your operational pain points, and determine whether STACKED OS is a good fit. No sales pressure. If we\'re not the right solution, we\'ll tell you.',
   },
   {
     question: 'How much does STACKED OS cost?',
     answer:
-      'Pricing depends on the scope and complexity of your operational needs. We don\'t publish fixed pricing because every engagement is custom-designed for the business. The strategy call is the best way to understand what an engagement would look like and what the investment would be.',
+      'Pricing depends on the scope and complexity of your operational needs. We don\'t publish fixed pricing because every engagement is custom-designed for the business. The diagnosis call is the best way to understand what an engagement would look like and what the investment would be.',
   },
   {
     question: 'Can you work with remote and distributed teams?',
@@ -102,7 +102,7 @@ export default function FAQPage() {
               Have a question that isn&apos;t answered here?
             </p>
             <Link href="/book-a-call" className="btn-dark mt-6">
-              Ask Us on a Strategy Call
+              Ask Us on a Diagnosis Call
             </Link>
           </div>
         </div>

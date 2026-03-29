@@ -8,7 +8,7 @@ interface CTASectionProps {
 
 export function CTASection({
   headline = 'Ready to build a business that runs on systems?',
-  subheadline = "Book a strategy call to see if STACKED OS is the right fit for your operation.",
+  subheadline = "If this resonates, the next step is a diagnosis conversation.",
   dark = true,
 }: CTASectionProps) {
   return (
@@ -30,7 +30,7 @@ export function CTASection({
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Link href="/book-a-call" className={dark ? 'btn-primary' : 'btn-dark'}>
-            Book a Strategy Call
+            Book a Diagnosis Call
             <svg
               className="ml-2 w-4 h-4"
               fill="none"

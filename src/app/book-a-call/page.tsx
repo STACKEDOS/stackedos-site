@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Book a Strategy Call — See If STACKED OS Fits Your Business',
+  title: 'Book a Diagnosis Call — See If STACKED OS Fits Your Business',
   description:
-    'Schedule a strategy call with STACKED OS. We\'ll diagnose your operational bottlenecks and determine if our systems-first approach is the right fit for your business.',
+    'Schedule a diagnosis call with STACKED OS. We\'ll diagnose your operational bottlenecks and determine if our systems-first approach is the right fit for your business.',
   openGraph: {
-    title: 'Book a Strategy Call — STACKED OS',
+    title: 'Book a Diagnosis Call — STACKED OS',
     description:
-      'Schedule a strategy call. We\'ll diagnose your operational bottlenecks and show you what a systems-first approach looks like.',
+      'Schedule a diagnosis call. We\'ll diagnose your operational bottlenecks and show you what a systems-first approach looks like.',
   },
 }
 
@@ -21,14 +21,14 @@ export default function BookACallPage() {
             {/* Left: Info */}
             <div>
               <p className="text-sm font-semibold text-brand-700 uppercase tracking-widest mb-6">
-                Book a Strategy Call
+                Diagnosis Call
               </p>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-dark-950 text-balance">
-                Let&apos;s see if STACKED OS is the right fit.
+                If this resonates, the next step is a diagnosis conversation.
               </h1>
               <p className="mt-6 text-lg text-dark-500 leading-relaxed">
-                This isn&apos;t a sales pitch. It&apos;s a strategy
-                conversation. We&apos;ll dig into your current operations,
+                This isn&apos;t a sales pitch. It&apos;s a structured
+                conversation where we dig into your current operations,
                 identify the biggest bottlenecks, and determine whether our
                 approach makes sense for your business.
               </p>
@@ -85,7 +85,7 @@ export default function BookACallPage() {
                   Best fit for this call:
                 </p>
                 <ul className="space-y-2 text-sm text-dark-600">
-                  <li>• Businesses with existing revenue, a team, and operations that can't keep up</li>
+                  <li>• Businesses with existing revenue, a team, and operations that can&apos;t keep up</li>
                   <li>• Companies experiencing operational growing pains</li>
                   <li>• Owners/operators who want systems, not more people</li>
                   <li>• Businesses ready to invest in operational infrastructure</li>
@@ -93,55 +93,33 @@ export default function BookACallPage() {
               </div>
             </div>
 
-            {/* Right: Form/Embed Placeholder */}
+            {/* Right: Calendar Embed */}
             <div>
-              <div className="bg-dark-50 rounded-2xl p-8 md:p-12 border border-dark-100">
+              <div className="bg-dark-50 rounded-2xl p-4 md:p-6 border border-dark-100">
                 <h2 className="text-2xl font-bold text-dark-950 mb-2">
-                  Schedule Your Call
+                  Schedule Your Diagnosis Call
                 </h2>
-                <p className="text-dark-500 mb-8">
+                <p className="text-dark-500 mb-6">
                   Choose a time that works for you. Calls typically run 30
                   minutes.
                 </p>
 
-                <div className="text-center space-y-8">
-                  <div className="bg-white rounded-xl border border-dark-200 p-10">
-                    <svg
-                      className="w-14 h-14 text-brand-700 mx-auto mb-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <h3 className="text-xl font-bold text-dark-900 mb-2">
-                      Reach out directly
-                    </h3>
-                    <p className="text-dark-500 mb-6">
-                      Send us a message and we&apos;ll get back to you within one
-                      business day to schedule your strategy call.
-                    </p>
-                    <a
-                      href="mailto:brandon@bowersgroupinc.com"
-                      className="btn-primary text-lg !py-4 !px-10 w-full sm:w-auto"
-                    >
-                      Email Us to Book a Call
-                    </a>
-                    <p className="mt-4 text-sm text-dark-400">
-                      brandon@bowersgroupinc.com
-                    </p>
-                  </div>
+                <div className="bg-white rounded-xl overflow-hidden">
+                  <iframe
+                    src="https://hub.stackedos.io/widget/booking/stackedos-diagnosis"
+                    style={{ width: '100%', minHeight: '600px', border: 'none', overflow: 'hidden' }}
+                    scrolling="no"
+                    id="stackedos-diagnosis-iframe"
+                    title="Schedule a STACKED OS Diagnosis Call"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <Script src="https://hub.stackedos.io/js/form_embed.js" strategy="lazyOnload" />
     </>
   )
 }

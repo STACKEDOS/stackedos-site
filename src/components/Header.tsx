@@ -41,7 +41,7 @@ export function Header() {
               </Link>
             ))}
             <Link href="/book-a-call" className="btn-primary text-sm !py-3 !px-6">
-              Book a Call
+              Book a Diagnosis Call
             </Link>
           </div>
 
@@ -95,7 +95,7 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="btn-primary text-sm !py-3 mt-2 text-center"
               >
-                Book a Call
+                Book a Diagnosis Call
               </Link>
             </div>
           </div>

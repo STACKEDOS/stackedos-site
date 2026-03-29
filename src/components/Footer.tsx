@@ -11,7 +11,7 @@ const footerLinks = {
   Solutions: [
     { name: 'The STACKED Method', href: '/method' },
     { name: 'Solutions Overview', href: '/solutions' },
-    { name: 'Book a Call', href: '/book-a-call' },
+    { name: 'Book a Diagnosis Call', href: '/book-a-call' },
   ],
 }
 
@@ -68,7 +68,7 @@ export function Footer() {
               href="/book-a-call"
               className="text-sm text-dark-400 hover:text-white transition-colors"
             >
-              Book a Strategy Call
+              Book a Diagnosis Call
             </Link>
           </div>
         </div>
