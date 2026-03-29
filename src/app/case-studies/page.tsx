@@ -5,11 +5,11 @@ import { CTASection } from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'Case Studies — Real Results from STACKED OS Implementations',
   description:
-    'See how STACKED OS has helped growing service businesses build operational infrastructure, reduce owner dependence, and scale with systems instead of people.',
+    'See how STACKED OS has helped growing businesses build operational infrastructure, reduce owner dependence, and scale with systems instead of people.',
   openGraph: {
     title: 'Case Studies — STACKED OS',
     description:
-      'Real operational transformations for service businesses.',
+      'Real operational transformations for growing businesses.',
   },
 }
 
@@ -72,7 +72,7 @@ export default function CaseStudiesPage() {
               Real operations. Real results. Real businesses.
             </h1>
             <p className="mt-8 text-lg md:text-xl text-dark-500 max-w-2xl leading-relaxed">
-              See how service businesses have used STACKED OS to build
+              See how growing businesses have used STACKED OS to build
               operational infrastructure that scales.
             </p>
           </div>
